@@ -1,0 +1,11 @@
+{
+    "FlashLightCharge": {
+        "DecreaseChargeValue": 0.20000000298023224,
+        "GaugePosition": [
+            20.0,
+            150.0
+        ],
+        "IncreaseChargeValue": 0.10000000149011612,
+        "PartcleReleaseTime": 1.0
+    }
+}

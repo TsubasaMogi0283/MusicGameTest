@@ -1,0 +1,61 @@
+
+ローポリのハロウィンセットです。
+VRChatなどのアバターやワールドで設置して
+ハロウィンを楽しみましょう☆
+
+● ポリゴン数 計18,060
+
+
+===== 内容物 =====
+
+○ FBXファイル　
+ ・Halloween_set_2020_0-1-2.fbx
+○ unitypackageファイル 
+ ・Halloween_set_2020_0-1-2.unitypackage
+○ blenderファイル 
+ ・Halloween_set_2020_0-1-2.blend
+○ Readme
+ ・Readme_20201031.txt
+
+
+===== モデル詳細 =====
+ 
+・館／house
+・棺／cemetery01
+・十字架／cemetery02
+・墓石／cemetery03
+・ランタン／ramp
+・箒／broom
+・こうもり／bat
+・ろうそく(太)／candle_01
+・ろうそく(細)／candle_02
+・魔女の帽子／witch's hat_01
+・魔女の帽子 曲がり有／witch's hat_02
+・かぼちゃ／kabocha_01
+・かぼちゃ縦長／kabocha_02
+・ゴースト(怒)／ghost01
+・ゴースト／ghost02
+・お化けの木／tree
+・柵／fence
+
+
+===== 利用規約 =====
+
+● 以下の利用規約は購入した時点で同意したこととし、規約が更新された場合最新日時の規約を有効とします。
+
+・改変／可
+・商用利用／可
+・VRChtatなどで使用するアバターやペデスタル、ワールドへの同梱／可
+・作者詐称／不可
+・再配布、本データを含めた販売／不可
+・R-18・R-18G／制限なし
+
+● 本データおよび改変データを使用した際に生じた何らかのトラブルや損失に対し、制作者は一切責任を追わないものとします。
+
+
+制作者 enufshi／えぬふし／n_enu
+
+
+===== Twitter =====
+
+https://twitter.com/n_enu_entoria

@@ -1,0 +1,1955 @@
+{
+    "name": "scene",
+    "objects": [
+        {
+            "type": "EMPTY",
+            "name": "fence_01.001",
+            "transform": {
+                "scaling": [
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "translation": [
+                    0.094696044921875,
+                    77.88661193847656,
+                    1.6611281633377075
+                ]
+            }
+        },
+        {
+            "type": "LIGHT",
+            "name": "Light",
+            "transform": {
+                "scaling": [
+                    1.0,
+                    0.9999999403953552,
+                    1.0
+                ],
+                "rotation": [
+                    37.26104736328125,
+                    3.1637091636657715,
+                    106.93632507324219
+                ],
+                "translation": [
+                    4.076245307922363,
+                    66.38780212402344,
+                    5.903861999511719
+                ]
+            }
+        },
+        {
+            "type": "CAMERA",
+            "name": "Camera",
+            "transform": {
+                "scaling": [
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "rotation": [
+                    90.00000762939453,
+                    -0.0,
+                    0.0
+                ],
+                "translation": [
+                    0.0,
+                    0.0,
+                    2.049999952316284
+                ]
+            }
+        },
+        {
+            "type": "MESH",
+            "name": "平面",
+            "transform": {
+                "scaling": [
+                    1.5,
+                    5.0,
+                    2.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "translation": [
+                    0.0,
+                    177.70791625976562,
+                    0.0
+                ]
+            },
+            "file_name": "Grass",
+            "object_type": "Stage",
+            "is_invisible": false
+        },
+        {
+            "type": "MESH",
+            "name": "EscapeSucceededObject",
+            "transform": {
+                "scaling": [
+                    2.0,
+                    2.0,
+                    2.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "translation": [
+                    0.0,
+                    24.983522415161133,
+                    5.745871067047119
+                ]
+            },
+            "file_name": "SucceededEscape",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.013",
+            "transform": {
+                "scaling": [
+                    2.0,
+                    2.0,
+                    2.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "translation": [
+                    26.594440460205078,
+                    48.770263671875,
+                    1.5282429456710815
+                ]
+            },
+            "file_name": "Leef1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.014",
+            "transform": {
+                "scaling": [
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "translation": [
+                    26.594440460205078,
+                    48.770263671875,
+                    0.0
+                ]
+            },
+            "file_name": "Trunk1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.015",
+            "transform": {
+                "scaling": [
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "translation": [
+                    26.516582489013672,
+                    61.719337463378906,
+                    0.0
+                ]
+            },
+            "file_name": "Trunk1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.016",
+            "transform": {
+                "scaling": [
+                    2.0,
+                    2.0,
+                    2.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "translation": [
+                    26.516582489013672,
+                    61.719337463378906,
+                    1.5282429456710815
+                ]
+            },
+            "file_name": "Leef1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.017",
+            "transform": {
+                "scaling": [
+                    2.0,
+                    2.0,
+                    2.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "translation": [
+                    26.516582489013672,
+                    75.66197967529297,
+                    1.5282429456710815
+                ]
+            },
+            "file_name": "Leef1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.099",
+            "transform": {
+                "scaling": [
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "translation": [
+                    19.063549041748047,
+                    40.347721099853516,
+                    0.0
+                ]
+            },
+            "file_name": "Trunk1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.018",
+            "transform": {
+                "scaling": [
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "translation": [
+                    26.516582489013672,
+                    75.66197967529297,
+                    0.0
+                ]
+            },
+            "file_name": "Trunk1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.019",
+            "transform": {
+                "scaling": [
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "translation": [
+                    26.516582489013672,
+                    89.28409576416016,
+                    0.0
+                ]
+            },
+            "file_name": "Trunk1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.020",
+            "transform": {
+                "scaling": [
+                    2.0,
+                    2.0,
+                    2.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "translation": [
+                    26.516582489013672,
+                    89.28409576416016,
+                    1.5282429456710815
+                ]
+            },
+            "file_name": "Leef1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.021",
+            "transform": {
+                "scaling": [
+                    2.0,
+                    2.0,
+                    2.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "translation": [
+                    26.516582489013672,
+                    105.16921997070312,
+                    1.5282429456710815
+                ]
+            },
+            "file_name": "Leef1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.022",
+            "transform": {
+                "scaling": [
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "translation": [
+                    26.516582489013672,
+                    105.16921997070312,
+                    0.0
+                ]
+            },
+            "file_name": "Trunk1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.023",
+            "transform": {
+                "scaling": [
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "translation": [
+                    26.516582489013672,
+                    121.69438171386719,
+                    0.0
+                ]
+            },
+            "file_name": "Trunk1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.024",
+            "transform": {
+                "scaling": [
+                    2.0,
+                    2.0,
+                    2.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "translation": [
+                    26.516582489013672,
+                    121.69438171386719,
+                    1.5282429456710815
+                ]
+            },
+            "file_name": "Leef1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.087",
+            "transform": {
+                "scaling": [
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "translation": [
+                    18.98569107055664,
+                    130.9881134033203,
+                    0.0
+                ]
+            },
+            "file_name": "Trunk1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.088",
+            "transform": {
+                "scaling": [
+                    2.0,
+                    2.0,
+                    2.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "translation": [
+                    18.98569107055664,
+                    130.9881134033203,
+                    1.5282429456710815
+                ]
+            },
+            "file_name": "Leef1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.089",
+            "transform": {
+                "scaling": [
+                    2.0,
+                    2.0,
+                    2.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "translation": [
+                    18.98569107055664,
+                    113.27183532714844,
+                    1.5282429456710815
+                ]
+            },
+            "file_name": "Leef1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.090",
+            "transform": {
+                "scaling": [
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "translation": [
+                    18.98569107055664,
+                    113.27183532714844,
+                    0.0
+                ]
+            },
+            "file_name": "Trunk1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.091",
+            "transform": {
+                "scaling": [
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "translation": [
+                    18.98569107055664,
+                    96.74668884277344,
+                    0.0
+                ]
+            },
+            "file_name": "Trunk1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.092",
+            "transform": {
+                "scaling": [
+                    2.0,
+                    2.0,
+                    2.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "translation": [
+                    18.98569107055664,
+                    96.74668884277344,
+                    1.5282429456710815
+                ]
+            },
+            "file_name": "Leef1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.093",
+            "transform": {
+                "scaling": [
+                    2.0,
+                    2.0,
+                    2.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "translation": [
+                    18.98569107055664,
+                    80.86155700683594,
+                    1.5282429456710815
+                ]
+            },
+            "file_name": "Leef1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.094",
+            "transform": {
+                "scaling": [
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "translation": [
+                    18.98569107055664,
+                    80.86155700683594,
+                    0.0
+                ]
+            },
+            "file_name": "Trunk1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.095",
+            "transform": {
+                "scaling": [
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "translation": [
+                    18.98569107055664,
+                    67.23944091796875,
+                    0.0
+                ]
+            },
+            "file_name": "Trunk1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.096",
+            "transform": {
+                "scaling": [
+                    2.0,
+                    2.0,
+                    2.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "translation": [
+                    18.98569107055664,
+                    67.23944091796875,
+                    1.5282429456710815
+                ]
+            },
+            "file_name": "Leef1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.097",
+            "transform": {
+                "scaling": [
+                    2.0,
+                    2.0,
+                    2.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "translation": [
+                    18.98569107055664,
+                    53.29679870605469,
+                    1.5282429456710815
+                ]
+            },
+            "file_name": "Leef1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.098",
+            "transform": {
+                "scaling": [
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "translation": [
+                    18.98569107055664,
+                    53.29679870605469,
+                    0.0
+                ]
+            },
+            "file_name": "Trunk1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.100",
+            "transform": {
+                "scaling": [
+                    2.0,
+                    2.0,
+                    2.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "translation": [
+                    19.063549041748047,
+                    40.347721099853516,
+                    1.5282429456710815
+                ]
+            },
+            "file_name": "Leef1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.101",
+            "transform": {
+                "scaling": [
+                    2.0,
+                    2.0,
+                    2.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    -178.54531860351562
+                ],
+                "translation": [
+                    24.787723541259766,
+                    34.592124938964844,
+                    1.528242826461792
+                ]
+            },
+            "file_name": "Leef1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.102",
+            "transform": {
+                "scaling": [
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    -178.54531860351562
+                ],
+                "translation": [
+                    24.787723541259766,
+                    34.592124938964844,
+                    5.960464477539063e-08
+                ]
+            },
+            "file_name": "Trunk1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.103",
+            "transform": {
+                "scaling": [
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    -178.54531860351562
+                ],
+                "translation": [
+                    25.194278717041016,
+                    21.649208068847656,
+                    5.960464477539063e-08
+                ]
+            },
+            "file_name": "Trunk1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.104",
+            "transform": {
+                "scaling": [
+                    2.0,
+                    2.0,
+                    2.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    -178.54531860351562
+                ],
+                "translation": [
+                    25.194278717041016,
+                    21.649208068847656,
+                    1.528242826461792
+                ]
+            },
+            "file_name": "Leef1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.105",
+            "transform": {
+                "scaling": [
+                    2.0,
+                    2.0,
+                    2.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    -178.54531860351562
+                ],
+                "translation": [
+                    25.548229217529297,
+                    7.7110595703125,
+                    1.528242826461792
+                ]
+            },
+            "file_name": "Leef1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.106",
+            "transform": {
+                "scaling": [
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    -178.54531860351562
+                ],
+                "translation": [
+                    25.548229217529297,
+                    7.7110595703125,
+                    5.960464477539063e-08
+                ]
+            },
+            "file_name": "Trunk1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.107",
+            "transform": {
+                "scaling": [
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    -178.54531860351562
+                ],
+                "translation": [
+                    25.894031524658203,
+                    -5.906669616699219,
+                    5.960464477539063e-08
+                ]
+            },
+            "file_name": "Trunk1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.108",
+            "transform": {
+                "scaling": [
+                    2.0,
+                    2.0,
+                    2.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    -178.54531860351562
+                ],
+                "translation": [
+                    25.894031524658203,
+                    -5.906669616699219,
+                    1.528242826461792
+                ]
+            },
+            "file_name": "Leef1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.121",
+            "transform": {
+                "scaling": [
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    -178.54531860351562
+                ],
+                "translation": [
+                    18.233577728271484,
+                    -0.8999481201171875,
+                    5.960464477539063e-08
+                ]
+            },
+            "file_name": "Trunk1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.122",
+            "transform": {
+                "scaling": [
+                    2.0,
+                    2.0,
+                    2.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    -178.54531860351562
+                ],
+                "translation": [
+                    18.233577728271484,
+                    -0.8999481201171875,
+                    1.528242826461792
+                ]
+            },
+            "file_name": "Leef1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.123",
+            "transform": {
+                "scaling": [
+                    2.0,
+                    2.0,
+                    2.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    -178.54531860351562
+                ],
+                "translation": [
+                    17.879627227783203,
+                    13.038204193115234,
+                    1.528242826461792
+                ]
+            },
+            "file_name": "Leef1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.124",
+            "transform": {
+                "scaling": [
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    -178.54531860351562
+                ],
+                "translation": [
+                    17.879627227783203,
+                    13.038204193115234,
+                    5.960464477539063e-08
+                ]
+            },
+            "file_name": "Trunk1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.125",
+            "transform": {
+                "scaling": [
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    -178.54531860351562
+                ],
+                "translation": [
+                    17.473072052001953,
+                    25.981124877929688,
+                    5.960464477539063e-08
+                ]
+            },
+            "file_name": "Trunk1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.126",
+            "transform": {
+                "scaling": [
+                    2.0,
+                    2.0,
+                    2.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    -178.54531860351562
+                ],
+                "translation": [
+                    17.473072052001953,
+                    25.981124877929688,
+                    1.528242826461792
+                ]
+            },
+            "file_name": "Leef1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.001",
+            "transform": {
+                "scaling": [
+                    2.0,
+                    2.0,
+                    2.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    -178.54531860351562
+                ],
+                "translation": [
+                    -28.95089340209961,
+                    25.981124877929688,
+                    1.528242826461792
+                ]
+            },
+            "file_name": "Leef1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.002",
+            "transform": {
+                "scaling": [
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    -178.54531860351562
+                ],
+                "translation": [
+                    -28.95089340209961,
+                    25.981124877929688,
+                    5.960464477539063e-08
+                ]
+            },
+            "file_name": "Trunk1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.003",
+            "transform": {
+                "scaling": [
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    -178.54531860351562
+                ],
+                "translation": [
+                    -28.54433822631836,
+                    13.038204193115234,
+                    5.960464477539063e-08
+                ]
+            },
+            "file_name": "Trunk1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.004",
+            "transform": {
+                "scaling": [
+                    2.0,
+                    2.0,
+                    2.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    -178.54531860351562
+                ],
+                "translation": [
+                    -28.54433822631836,
+                    13.038204193115234,
+                    1.528242826461792
+                ]
+            },
+            "file_name": "Leef1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.005",
+            "transform": {
+                "scaling": [
+                    2.0,
+                    2.0,
+                    2.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    -178.54531860351562
+                ],
+                "translation": [
+                    -28.190387725830078,
+                    -0.8999481201171875,
+                    1.528242826461792
+                ]
+            },
+            "file_name": "Leef1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.006",
+            "transform": {
+                "scaling": [
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    -178.54531860351562
+                ],
+                "translation": [
+                    -28.190387725830078,
+                    -0.8999481201171875,
+                    5.960464477539063e-08
+                ]
+            },
+            "file_name": "Trunk1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.007",
+            "transform": {
+                "scaling": [
+                    2.0,
+                    2.0,
+                    2.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    -178.54531860351562
+                ],
+                "translation": [
+                    -20.529932022094727,
+                    -5.906669616699219,
+                    1.528242826461792
+                ]
+            },
+            "file_name": "Leef1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.008",
+            "transform": {
+                "scaling": [
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    -178.54531860351562
+                ],
+                "translation": [
+                    -20.529932022094727,
+                    -5.906669616699219,
+                    5.960464477539063e-08
+                ]
+            },
+            "file_name": "Trunk1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.009",
+            "transform": {
+                "scaling": [
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    -178.54531860351562
+                ],
+                "translation": [
+                    -20.875734329223633,
+                    7.7110595703125,
+                    5.960464477539063e-08
+                ]
+            },
+            "file_name": "Trunk1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.010",
+            "transform": {
+                "scaling": [
+                    2.0,
+                    2.0,
+                    2.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    -178.54531860351562
+                ],
+                "translation": [
+                    -20.875734329223633,
+                    7.7110595703125,
+                    1.528242826461792
+                ]
+            },
+            "file_name": "Leef1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.011",
+            "transform": {
+                "scaling": [
+                    2.0,
+                    2.0,
+                    2.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    -178.54531860351562
+                ],
+                "translation": [
+                    -21.229684829711914,
+                    21.649208068847656,
+                    1.528242826461792
+                ]
+            },
+            "file_name": "Leef1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.012",
+            "transform": {
+                "scaling": [
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    -178.54531860351562
+                ],
+                "translation": [
+                    -21.229684829711914,
+                    21.649208068847656,
+                    5.960464477539063e-08
+                ]
+            },
+            "file_name": "Trunk1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.025",
+            "transform": {
+                "scaling": [
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    -178.54531860351562
+                ],
+                "translation": [
+                    -21.636240005493164,
+                    34.592124938964844,
+                    5.960464477539063e-08
+                ]
+            },
+            "file_name": "Trunk1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.026",
+            "transform": {
+                "scaling": [
+                    2.0,
+                    2.0,
+                    2.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    -178.54531860351562
+                ],
+                "translation": [
+                    -21.636240005493164,
+                    34.592124938964844,
+                    1.528242826461792
+                ]
+            },
+            "file_name": "Leef1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.027",
+            "transform": {
+                "scaling": [
+                    2.0,
+                    2.0,
+                    2.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "translation": [
+                    -27.360416412353516,
+                    40.347721099853516,
+                    1.5282429456710815
+                ]
+            },
+            "file_name": "Leef1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.028",
+            "transform": {
+                "scaling": [
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "translation": [
+                    -27.360416412353516,
+                    40.347721099853516,
+                    0.0
+                ]
+            },
+            "file_name": "Trunk1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.029",
+            "transform": {
+                "scaling": [
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "translation": [
+                    -27.438274383544922,
+                    53.29679870605469,
+                    0.0
+                ]
+            },
+            "file_name": "Trunk1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.030",
+            "transform": {
+                "scaling": [
+                    2.0,
+                    2.0,
+                    2.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "translation": [
+                    -27.438274383544922,
+                    53.29679870605469,
+                    1.5282429456710815
+                ]
+            },
+            "file_name": "Leef1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.031",
+            "transform": {
+                "scaling": [
+                    2.0,
+                    2.0,
+                    2.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "translation": [
+                    -27.438274383544922,
+                    67.23944091796875,
+                    1.5282429456710815
+                ]
+            },
+            "file_name": "Leef1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.032",
+            "transform": {
+                "scaling": [
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "translation": [
+                    -27.438274383544922,
+                    67.23944091796875,
+                    0.0
+                ]
+            },
+            "file_name": "Trunk1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.033",
+            "transform": {
+                "scaling": [
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "translation": [
+                    -27.438274383544922,
+                    80.86155700683594,
+                    0.0
+                ]
+            },
+            "file_name": "Trunk1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.034",
+            "transform": {
+                "scaling": [
+                    2.0,
+                    2.0,
+                    2.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "translation": [
+                    -27.438274383544922,
+                    80.86155700683594,
+                    1.5282429456710815
+                ]
+            },
+            "file_name": "Leef1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.035",
+            "transform": {
+                "scaling": [
+                    2.0,
+                    2.0,
+                    2.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "translation": [
+                    -27.438274383544922,
+                    96.74668884277344,
+                    1.5282429456710815
+                ]
+            },
+            "file_name": "Leef1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.036",
+            "transform": {
+                "scaling": [
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "translation": [
+                    -27.438274383544922,
+                    96.74668884277344,
+                    0.0
+                ]
+            },
+            "file_name": "Trunk1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.037",
+            "transform": {
+                "scaling": [
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "translation": [
+                    -27.438274383544922,
+                    113.27183532714844,
+                    0.0
+                ]
+            },
+            "file_name": "Trunk1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.038",
+            "transform": {
+                "scaling": [
+                    2.0,
+                    2.0,
+                    2.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "translation": [
+                    -27.438274383544922,
+                    113.27183532714844,
+                    1.5282429456710815
+                ]
+            },
+            "file_name": "Leef1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.039",
+            "transform": {
+                "scaling": [
+                    2.0,
+                    2.0,
+                    2.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "translation": [
+                    -27.438274383544922,
+                    130.9881134033203,
+                    1.5282429456710815
+                ]
+            },
+            "file_name": "Leef1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.040",
+            "transform": {
+                "scaling": [
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "translation": [
+                    -27.438274383544922,
+                    130.9881134033203,
+                    0.0
+                ]
+            },
+            "file_name": "Trunk1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.041",
+            "transform": {
+                "scaling": [
+                    2.0,
+                    2.0,
+                    2.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "translation": [
+                    -19.907381057739258,
+                    121.69438171386719,
+                    1.5282429456710815
+                ]
+            },
+            "file_name": "Leef1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.042",
+            "transform": {
+                "scaling": [
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "translation": [
+                    -19.907381057739258,
+                    121.69438171386719,
+                    0.0
+                ]
+            },
+            "file_name": "Trunk1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.043",
+            "transform": {
+                "scaling": [
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "translation": [
+                    -19.907381057739258,
+                    105.16921997070312,
+                    0.0
+                ]
+            },
+            "file_name": "Trunk1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.044",
+            "transform": {
+                "scaling": [
+                    2.0,
+                    2.0,
+                    2.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "translation": [
+                    -19.907381057739258,
+                    105.16921997070312,
+                    1.5282429456710815
+                ]
+            },
+            "file_name": "Leef1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.045",
+            "transform": {
+                "scaling": [
+                    2.0,
+                    2.0,
+                    2.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "translation": [
+                    -19.907381057739258,
+                    89.28409576416016,
+                    1.5282429456710815
+                ]
+            },
+            "file_name": "Leef1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.046",
+            "transform": {
+                "scaling": [
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "translation": [
+                    -19.907381057739258,
+                    89.28409576416016,
+                    0.0
+                ]
+            },
+            "file_name": "Trunk1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.047",
+            "transform": {
+                "scaling": [
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "translation": [
+                    -19.907381057739258,
+                    75.66197967529297,
+                    0.0
+                ]
+            },
+            "file_name": "Trunk1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.048",
+            "transform": {
+                "scaling": [
+                    2.0,
+                    2.0,
+                    2.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "translation": [
+                    -19.907381057739258,
+                    75.66197967529297,
+                    1.5282429456710815
+                ]
+            },
+            "file_name": "Leef1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.049",
+            "transform": {
+                "scaling": [
+                    2.0,
+                    2.0,
+                    2.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "translation": [
+                    -19.907381057739258,
+                    61.719337463378906,
+                    1.5282429456710815
+                ]
+            },
+            "file_name": "Leef1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.050",
+            "transform": {
+                "scaling": [
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "translation": [
+                    -19.907381057739258,
+                    61.719337463378906,
+                    0.0
+                ]
+            },
+            "file_name": "Trunk1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.051",
+            "transform": {
+                "scaling": [
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "translation": [
+                    -19.82952308654785,
+                    48.770263671875,
+                    0.0
+                ]
+            },
+            "file_name": "Trunk1",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "tree1.052",
+            "transform": {
+                "scaling": [
+                    2.0,
+                    2.0,
+                    2.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "translation": [
+                    -19.82952308654785,
+                    48.770263671875,
+                    1.5282429456710815
+                ]
+            },
+            "file_name": "Leef1",
+            "object_type": "Stage"
+        }
+    ]
+}

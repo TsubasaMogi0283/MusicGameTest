@@ -1,0 +1,210 @@
+{
+    "name": "scene",
+    "objects": [
+        {
+            "type": "EMPTY",
+            "name": "fence_01.001",
+            "transform": {
+                "scaling": [
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "translation": [
+                    0.094696044921875,
+                    12.504263877868652,
+                    1.6611281633377075
+                ]
+            }
+        },
+        {
+            "type": "MESH",
+            "name": "cemetery03.001",
+            "transform": {
+                "scaling": [
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    90.00000762939453
+                ],
+                "translation": [
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            "file_name": "Grave",
+            "object_type": "Stage"
+        },
+        {
+            "type": "LIGHT",
+            "name": "Light",
+            "transform": {
+                "scaling": [
+                    1.0,
+                    0.9999999403953552,
+                    1.0
+                ],
+                "rotation": [
+                    37.26104736328125,
+                    3.1637091636657715,
+                    106.93632507324219
+                ],
+                "translation": [
+                    4.076245307922363,
+                    1.0054539442062378,
+                    5.903861999511719
+                ]
+            }
+        },
+        {
+            "type": "CAMERA",
+            "name": "Camera",
+            "transform": {
+                "scaling": [
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "rotation": [
+                    63.559295654296875,
+                    2.2983238068263745e-07,
+                    46.69194412231445
+                ],
+                "translation": [
+                    7.358891487121582,
+                    -6.925790786743164,
+                    4.958309173583984
+                ]
+            }
+        },
+        {
+            "type": "MESH",
+            "name": "Ground",
+            "transform": {
+                "scaling": [
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "translation": [
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            "file_name": "Grass",
+            "object_type": "Stage",
+            "is_invisible": false
+        },
+        {
+            "type": "MESH",
+            "name": "Failed",
+            "transform": {
+                "scaling": [
+                    2.0,
+                    2.0,
+                    1.0
+                ],
+                "rotation": [
+                    89.99999237060547,
+                    8.428941811189361e-08,
+                    2.000000238418579
+                ],
+                "translation": [
+                    0.0,
+                    0.0,
+                    5.040106296539307
+                ]
+            },
+            "file_name": "FailedEscape",
+            "object_type": "Stage"
+        },
+        {
+            "type": "MESH",
+            "name": "ToTitle",
+            "transform": {
+                "scaling": [
+                    0.5,
+                    0.5,
+                    0.5
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "translation": [
+                    4.695577621459961,
+                    -2.864208698272705,
+                    0.45843935012817383
+                ]
+            },
+            "file_name": "ToTitle",
+            "object_type": "Stage",
+            "is_invisible": false
+        },
+        {
+            "type": "MESH",
+            "name": "ToGame",
+            "transform": {
+                "scaling": [
+                    0.5,
+                    0.5,
+                    0.5
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "translation": [
+                    -4.183776378631592,
+                    -2.818809747695923,
+                    0.5107827186584473
+                ]
+            },
+            "file_name": "ToGame",
+            "object_type": "Stage",
+            "is_invisible": false
+        },
+        {
+            "type": "MESH",
+            "name": "SelectArrow",
+            "transform": {
+                "scaling": [
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "translation": [
+                    -4.4912919998168945,
+                    -2.8386945724487305,
+                    3.436166286468506
+                ]
+            },
+            "file_name": "SelectArrow",
+            "object_type": "Stage",
+            "is_invisible": false
+        }
+    ]
+}
