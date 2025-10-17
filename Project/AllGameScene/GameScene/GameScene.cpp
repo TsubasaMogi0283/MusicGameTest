@@ -375,8 +375,8 @@ void GameScene::Update(Elysia::GameManager* gameManager) {
 				ImGui::InputFloat("Y座標", &positionY);
 				ImGui::End();
 
-				if (!note.isPlaySE_) {
-					//audio_->Play(arraiveSEHandle_, false);
+				if (!note.isPlaySE_&& moveRatio>=1.0f) {
+					audio_->Play(arraiveSEHandle_, false);
 					note.isPlaySE_ = true;
 				}
 
