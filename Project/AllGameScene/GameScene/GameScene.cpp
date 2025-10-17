@@ -73,8 +73,6 @@ void GameScene::Initialize() {
 	part_->SetInvisible(true);
 
 	std::vector<NoteBar> newNotesData = {
-
-
 		//0
 		{
 			// 0
@@ -90,24 +88,6 @@ void GameScene::Initialize() {
 
 			// 3. isAttack の値
 			true
-		},
-
-
-		//0
-		{
-			// 0
-			{
-				{ 0, 0, 0 },
-				{ 0, 0, 0 },
-				{ 0, 0, 0 },
-				{ 0, 0, 0 },
-			},
-
-			// 2. bpm の値
-			170,
-
-			// 3. isAttack の値
-			false
 		},
 		//1
 		{
@@ -125,22 +105,6 @@ void GameScene::Initialize() {
 			// 3. isAttack の値
 			true
 		},
-		//2
-		{
-			// 1
-			{
-				{ 1, 0, 0 },
-				{ 0, 0, 0 },
-				{ 1, 0, 1 },
-				{ 0, 0, 0 },
-			},
-
-			// 2. bpm の値
-			170,
-
-			// 3. isAttack の値
-			false
-		},
 	};
 
 	notesData_=newNotesData;
@@ -151,65 +115,59 @@ void GameScene::Initialize() {
 	//ハイスピはここで決めて時間に反映させたらいけそう
 
 	//合計の時間
-	float_t totalTime = START_OFFSET_TIME_;
-	for (const auto& bar : notesData_) {
-		float_t beatDuration = 60.0f / bar.bpm;                  // 1拍の秒数
-		float_t noteInterval = (beatDuration * 4.0f) / bar.notes.size();  // ノーツ間隔（1小節4拍）
+	float_t totalTime = 0.0f;
+	//開始時間の設定
+	float_t startTime = START_OFFSET_TIME_;
 
-		for (size_t i = 0; i < bar.notes.size(); ++i) {
+	for (const auto& bar : notesData_) {
+		//1拍の秒数
+		float_t beatDuration = 60.0f / bar.bpm;
+		//ノーツ間隔（1小節4拍）
+		float_t noteInterval = (beatDuration * 4.0f) / bar.notes.size();
+
+		for (size_t i = 0u; i < bar.notes.size(); ++i) {
 			const auto& note = bar.notes[i];
 
-			NoteInstance noteInstance;
-			// 表示中かどうか
-			noteInstance.isDisplay=true;
 			// 3レーン分チェック
 			if (note.left == 1) {
-				//左
-				noteInstance.lane=0;
-				//判定線に到着する時間
-				noteInstance.judgementArrivalTime = totalTime + i * noteInterval;
-				//動き出す時間
-				noteInstance.startMoveTime = noteInstance.judgementArrivalTime - START_OFFSET_TIME_;
-				//座標
-				noteInstance.position = {100.0f, WAITING_POSITION_Y_};
-				//スプライトの生成
-				noteInstance.noteSprite = Elysia::Sprite::Create(noteTextureHandle, noteInstance.position);
-				//挿入
-				noteInstances_.push_back(std::move(noteInstance));
-				
+				noteInstances_.emplace_back(
+					//レーン
+					0,
+					//判定線到着時間
+					totalTime + i * noteInterval,
+					totalTime + i * noteInterval - startTime,
+					true,
+					Vector2{100.0f, WAITING_POSITION_Y_},
+					Elysia::Sprite::Create(noteTextureHandle, { 100.0f, WAITING_POSITION_Y_ })
+				);
+
 			}
 			if (note.middle == 1) {
-				//中
-				noteInstance.lane = 1;
-				//判定線に到着する時間
-				noteInstance.judgementArrivalTime = totalTime + i * noteInterval;
-				//動き出す時間
-				noteInstance.startMoveTime = noteInstance.judgementArrivalTime - START_OFFSET_TIME_;
-				//座標
-				noteInstance.position = { 200.0f, WAITING_POSITION_Y_ };
-				//スプライトの生成
-				noteInstance.noteSprite = Elysia::Sprite::Create(noteTextureHandle, noteInstance.position);
-				//挿入
-				noteInstances_.push_back(std::move(noteInstance));
+				noteInstances_.emplace_back(
+					//レーン
+					1, 
+					totalTime + i * noteInterval,
+					totalTime + i * noteInterval - startTime,
+					true,
+					Vector2{ 200.0f, WAITING_POSITION_Y_ },
+					Elysia::Sprite::Create(noteTextureHandle, { 200.0f, WAITING_POSITION_Y_ })
+				);
 			}
 			if (note.right == 1) {
-				//右
-				noteInstance.lane = 2;
-				//判定線に到着する時間
-				noteInstance.judgementArrivalTime = totalTime + i * noteInterval;
-				//動き出す時間
-				noteInstance.startMoveTime = noteInstance.judgementArrivalTime - START_OFFSET_TIME_;
-				//座標
-				noteInstance.position = { 300.0f, WAITING_POSITION_Y_ };
-				//スプライトの生成
-				noteInstance.noteSprite = Elysia::Sprite::Create(noteTextureHandle, noteInstance.position);
-				//挿入
-				noteInstances_.push_back(std::move(noteInstance));
+				
+				noteInstances_.emplace_back(
+					//レーン
+					2,
+					totalTime + i * noteInterval,
+					totalTime + i * noteInterval - startTime,
+					true,
+					Vector2{ 300.0f, WAITING_POSITION_Y_ },
+					Elysia::Sprite::Create(noteTextureHandle, { 300.0f, WAITING_POSITION_Y_ })
+				);
 			}
 		}
 		totalTime += 4.0f * beatDuration; // 小節分進める
 	}
-
 	noteInstances_;
 
 	//読み込み
@@ -237,26 +195,24 @@ void GameScene::Update(Elysia::GameManager* gameManager) {
 	}
 	else {
 
+		
 		// 再生時間を取得
 		musicTime_ = audio_->GetPlayCurrentTime(musicHandle_);
-
-		for (const auto& note : noteInstances_) {
+		noteMoveTime_ = musicTime_- START_OFFSET_TIME_;
+		for (auto& note : noteInstances_) {
 			//画面外は非表示
-			if (musicTime_<note.startMoveTime) {
-				//note.isDisplay = false;
+			if (musicTime_ < note.startMoveTime) {
+				note.isDisplay = false;
 			}
 			//画面の表示
 			else {
-				note.noteSprite->SetInvisible(false);
-				
+
 				//判定時間
 				float_t judgementTime = note.judgementArrivalTime - musicTime_;
-				//-0.5fより下回ったら強制的にミス判定
-				if (judgementTime < -0.5f) {
-					
-				}
+
+
 				//開始から判定までどのくらいの位置にいるかを計算
-				float_t moveRatio = SingleCalculation::InverseLerp(note.startMoveTime,note.judgementArrivalTime,judgementTime);
+				float_t moveRatio = SingleCalculation::InverseLerp(note.startMoveTime, note.judgementArrivalTime, musicTime_);
 
 				//座標の計算
 				float_t positionY = SingleCalculation::Lerp(WAITING_POSITION_Y_, JUDGEMENT_POSITION_Y_, moveRatio);
@@ -264,6 +220,7 @@ void GameScene::Update(Elysia::GameManager* gameManager) {
 
 #ifdef _DEBUG
 				ImGui::Begin("ノーツ");
+				ImGui::InputFloat("判定時間", &judgementTime);
 				ImGui::InputFloat("割合", &moveRatio);
 				ImGui::InputFloat("Y座標", &positionY);
 				ImGui::End();
@@ -271,6 +228,12 @@ void GameScene::Update(Elysia::GameManager* gameManager) {
 
 				//各レーンの入力処理と判定の処理
 				//時間差で取る
+
+				//-0.5fより下回ったら強制的にミス判定
+				if (judgementTime < -0.5f) {
+
+				}
+
 			}
 		}
 	}
