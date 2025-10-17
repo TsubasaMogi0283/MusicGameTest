@@ -133,6 +133,123 @@ void GameScene::Initialize() {
 			170,
 
 		},
+
+
+		//1
+		{
+			// 1
+			{
+				{ 1, 0, 1 },
+				{ 0, 1, 0 },
+				{ 0, 0, 1 },
+				{ 0, 1, 0 },
+			},
+
+			// 2. bpm の値
+			170,
+
+		},
+		//1
+		{
+			// 1
+			{
+				{ 0, 1, 0 },
+				{ 0, 1, 1 },
+				{ 0, 1, 0 },
+				{ 1, 1, 0 },
+			},
+
+			// 2. bpm の値
+			170,
+
+		},
+
+
+		//1
+		{
+			// 1
+			{
+				{ 1, 0, 1 },
+				{ 0, 1, 0 },
+				{ 0, 0, 1 },
+				{ 0, 1, 0 },
+			},
+
+			// 2. bpm の値
+			170,
+
+		},
+		//1
+		{
+			// 1
+			{
+				{ 0, 1, 0 },
+				{ 0, 1, 1 },
+				{ 0, 1, 0 },
+				{ 1, 1, 0 },
+			},
+
+			// 2. bpm の値
+			170,
+
+		},
+
+
+		//1
+		{
+			// 1
+			{
+				{ 1, 0, 1 },
+				{ 0, 0, 0 },
+				{ 0, 0, 1 },
+				{ 1, 0, 0 },
+				{ 0, 0, 1 },
+				{ 0, 0, 0 },
+				{ 0, 1, 0 },
+				{ 0, 0, 0 },
+				{ 1, 0,  },
+				{ 0, 0, 0 },
+				{ 1, 0, 0 },
+				{ 0, 1, 0 },
+				{ 1, 0, 1 },
+				{ 0, 0, 0 },
+				{ 0, 0, 1 },
+				{ 0, 0, 0 },
+			},
+
+			// 2. bpm の値
+			170,
+
+		},
+
+
+		//1
+		{
+			// 1
+			{
+				{ 0, 1, 0 },
+				{ 1, 0, 1 },
+				{ 0, 1, 0 },
+				{ 0, 0, 0 },
+				{ 1, 0, 1 },
+				{ 0, 0, 0 },
+				{ 0, 1, 0 },
+				{ 1, 0, 1 },
+				{ 0, 1, 0 },
+				{ 0, 0, 0 },
+				{ 1, 0, 1 },
+				{ 0, 0, 0 },
+				{ 1, 0, 0 },
+				{ 0, 1, 0 },
+				{ 0, 0, 1 },
+				{ 0, 1, 0 },
+			},
+
+			// 2. bpm の値
+			170,
+
+		},
+
 	};
 
 	notesData_=newNotesData;
@@ -201,6 +318,8 @@ void GameScene::Initialize() {
 	//読み込み
 	musicHandle_ = audio_->Load("Resources/Audio/Sample2.mp3");
 	audio_->ChangeVolume(musicHandle_, 0.5f);
+	arraiveSEHandle_ = audio_->Load("Resources/Audio/SE/Arrive.wav");
+
 }
 
 
@@ -242,6 +361,9 @@ void GameScene::Update(Elysia::GameManager* gameManager) {
 				//開始から判定までどのくらいの位置にいるかを計算
 				float_t moveRatio = SingleCalculation::InverseLerp(note.startMoveTime, note.judgementArrivalTime, musicTime_);
 
+
+				
+
 				//座標の計算
 				float_t positionY = SingleCalculation::Lerp(WAITING_POSITION_Y_, JUDGEMENT_POSITION_Y_, moveRatio);
 				note.noteSprite->SetPositionY(positionY);
@@ -252,6 +374,12 @@ void GameScene::Update(Elysia::GameManager* gameManager) {
 				ImGui::InputFloat("割合", &moveRatio);
 				ImGui::InputFloat("Y座標", &positionY);
 				ImGui::End();
+
+				if (!note.isPlaySE_) {
+					//audio_->Play(arraiveSEHandle_, false);
+					note.isPlaySE_ = true;
+				}
+
 #endif // _DEBUG
 
 				//各レーンの入力処理と判定の処理

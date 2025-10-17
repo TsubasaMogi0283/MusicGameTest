@@ -102,6 +102,10 @@ struct NoteInstance {
 	Vector2 position = {};
 	//ノーツのスプライト
 	std::unique_ptr<Elysia::Sprite> noteSprite=nullptr;
+
+
+	//
+	bool isPlaySE_ = false;
 };
 
 /// <summary>
@@ -244,5 +248,7 @@ private:
 	uint32_t musicHandle_ = 0u;
 	//楽曲の時間
 	float_t musicTime_ = 0.0f;
+
+	uint32_t arraiveSEHandle_ = 0u;
 
 };

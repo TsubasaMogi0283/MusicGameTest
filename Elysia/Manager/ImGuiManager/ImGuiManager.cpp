@@ -21,7 +21,7 @@ void Elysia::ImGuiManager::Initialize() {
 	ImGuiIO& io = ImGui::GetIO();
 
 	//フォントの設定
-	std::string fontPath = "C:/Lesson/CG/CGGrade3/Ellysia_3.0/Resources/External/Font/GenShinGothic-P-Medium.ttf";
+	std::string fontPath = "Resources/External/Font/GenShinGothic-P-Medium.ttf";
 	ImFont* font = io.Fonts->AddFontFromFileTTF(fontPath.c_str(), 18.0f, NULL, io.Fonts->GetGlyphRangesJapanese());
 	if (font == NULL) {
 		assert(0);
