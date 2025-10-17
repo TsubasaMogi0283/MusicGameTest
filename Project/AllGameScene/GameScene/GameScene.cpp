@@ -73,9 +73,9 @@ void GameScene::Initialize() {
 	part_->SetInvisible(true);
 
 	std::vector<NoteBar> newNotesData = {
-		//0
+		//1
 		{
-			// 0
+			// 1
 			{
 				{ 0, 0, 0 },
 				{ 0, 0, 0 },
@@ -86,9 +86,8 @@ void GameScene::Initialize() {
 			// 2. bpm の値
 			170,
 
-			// 3. isAttack の値
-			true
 		},
+
 		//1
 		{
 			// 1
@@ -102,8 +101,37 @@ void GameScene::Initialize() {
 			// 2. bpm の値
 			170,
 
-			// 3. isAttack の値
-			true
+		},
+		
+		//1
+		{
+			// 1
+			{
+				{ 1, 0, 1 },
+				{ 0, 1, 0 },
+				{ 1, 0, 1 },
+				{ 0, 1, 0 },
+			},
+
+			// 2. bpm の値
+			170,
+
+		},
+
+
+		//1
+		{
+			// 1
+			{
+				{ 1, 0, 1 },
+				{ 0, 1, 0 },
+				{ 1, 0, 1 },
+				{ 0, 1, 0 },
+			},
+
+			// 2. bpm の値
+			170,
+
 		},
 	};
 

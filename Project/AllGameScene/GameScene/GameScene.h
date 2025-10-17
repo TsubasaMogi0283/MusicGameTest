@@ -86,8 +86,6 @@ struct NoteBar {
 	std::vector<Note >notes;
 	//BPM
 	uint32_t bpm;
-	//攻防
-	bool isAttack;
 };
 
 struct NoteInstance {
