@@ -91,10 +91,17 @@ struct NoteBar {
 };
 
 struct NoteInstance {
-	int32_t lane;       // 0=左, 1=中, 2=右
-	float appearTime;   // 曲中での出現タイミング(秒)
-	bool isActive;      // 表示中かどうか
-	Vector2 position;   // 現在の座標（描画用）
+	// 0=左, 1=中, 2=右
+	int32_t lane;   
+	//動き出す時間
+	float_t startMoveTime;
+	//判定線に到着する時間
+	float_t judgementArrivalTime;
+	// 表示中かどうか
+	bool isDisplay; 
+	//座標
+	Vector2 position;
+	//ノーツのスプライト
 	std::unique_ptr<Elysia::Sprite> noteSprite;
 };
 
@@ -181,7 +188,8 @@ private:
 	//判定の座標
 	const float_t JUDGEMENT_POSITION_Y_ = 650.0f;
 
-
+	//動き出す時間のオフセット
+	const float_t START_OFFSET_TIME_ = 3.0f;
 
 private:
 	

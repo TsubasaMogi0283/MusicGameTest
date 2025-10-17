@@ -7,128 +7,20 @@
     <Filter Include="Text">
       <UniqueIdentifier>{86ea6656-3c90-41a3-872c-722ea8f63729}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Project\Enemy">
-      <UniqueIdentifier>{50da64de-7949-4d78-9976-41a9e659d7be}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Project\Player">
-      <UniqueIdentifier>{64043a22-c8f5-4bb5-9fd8-8f56b10eb819}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Project\Item">
-      <UniqueIdentifier>{617e81c9-f892-40bf-92da-38799fc0e39e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Project\Item\Key">
-      <UniqueIdentifier>{fc1d294f-567f-4707-a4fc-9052cbc0f915}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Project\Item\Key\KeyManager">
-      <UniqueIdentifier>{f292f7df-b6ad-4cbe-93cb-c6b80da6c1c9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Project\Enemy\EnemyManager">
-      <UniqueIdentifier>{e2a6260b-6ea8-4c91-83ff-a92709617455}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Project\Enemy\StrongEnemy">
-      <UniqueIdentifier>{53f59d92-040d-4e5f-a0f1-6da83d07e9ea}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Project\Player\Test">
-      <UniqueIdentifier>{83fcd2cc-6d97-4ff6-9a5c-737b5fbaaaf3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Project\Enemy\NormalEnemy">
-      <UniqueIdentifier>{dfcbb99b-9978-43c1-a6cf-5a4c4e60f7f7}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Project\Camera">
       <UniqueIdentifier>{e783ebed-4b01-4c8e-84cd-f4deb18a6bc5}</UniqueIdentifier>
     </Filter>
     <Filter Include="Project\Camera\TitleRailCamera">
       <UniqueIdentifier>{d5dff015-e7ce-422c-8ab2-1a450b24d437}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Project\Player\Collision">
-      <UniqueIdentifier>{32b25b1e-d1a9-45a3-9a3b-830c6437a4fd}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Project\Scene">
       <UniqueIdentifier>{d00a8998-a08f-48ce-850f-96c0eddb4980}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Project\Scene\Title">
-      <UniqueIdentifier>{92919d9a-660d-4a63-8767-0a9223021c5b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Project\Scene\Title\BackTexture">
-      <UniqueIdentifier>{3c98c5d1-fbeb-4fc4-954e-709ff843decc}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Project\Scene\Title\BackTexture\Base">
-      <UniqueIdentifier>{1a8ba4e9-2995-4a38-876b-bc3672aa1833}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Project\Scene\Title\BackTexture\Night">
-      <UniqueIdentifier>{3eda95b9-7a37-4b75-8967-8fe6084d9219}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Project\Scene\Title\BackTexture\Sunset">
-      <UniqueIdentifier>{2c299317-3b0e-4484-8699-d2309df3e09c}</UniqueIdentifier>
     </Filter>
     <Filter Include="Project\Scene\Lose">
       <UniqueIdentifier>{57682276-21c2-48e2-83ee-02eed279de4a}</UniqueIdentifier>
     </Filter>
     <Filter Include="Project\Scene\Game">
       <UniqueIdentifier>{e3a0acb5-08b3-41f0-a41e-4357a3698e46}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Project\Scene\Win">
-      <UniqueIdentifier>{c06d8e17-a723-4892-983a-90de5852100f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Project\Enemy\StrongEnemy\State">
-      <UniqueIdentifier>{7edab689-453a-4532-93a2-63caf654df74}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Project\Enemy\StrongEnemy\State\NoneMove">
-      <UniqueIdentifier>{2ba195e1-dad6-46e7-b6ac-c64d66253079}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Project\Enemy\StrongEnemy\State\Move">
-      <UniqueIdentifier>{a7b4480a-79e5-4603-bdd8-7829d1120ea8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Project\Enemy\StrongEnemy\State\Tracking">
-      <UniqueIdentifier>{26e95439-f5ee-4fc7-84de-523d21d32531}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Project\Enemy\StrongEnemy\Collision">
-      <UniqueIdentifier>{31499a16-5c7f-4808-9394-c8cca8947cfe}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Project\Enemy\NormalEnemy\Collision">
-      <UniqueIdentifier>{a715e006-047c-42fc-acd3-da7f7ac8c453}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Project\Enemy\NormalEnemy\Collision\EnemyFlashLightCollision">
-      <UniqueIdentifier>{94a9085e-5e7c-4aca-abdd-af0623868eeb}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Project\Enemy\NormalEnemy\Collision\EnemyAttackCollision">
-      <UniqueIdentifier>{20d87d40-77b6-425d-8fb0-6466f81f7d5a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Project\Enemy\NormalEnemy\State">
-      <UniqueIdentifier>{8bf51e13-a542-4ce0-a4fb-fd353838ebd9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Project\Enemy\NormalEnemy\State\Move">
-      <UniqueIdentifier>{f3349baa-e050-43de-95d4-89d3e22fa6f6}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Project\Enemy\NormalEnemy\State\Tracking">
-      <UniqueIdentifier>{bf114fd8-2f48-4d65-a4cb-51fb2bd0700b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Project\Enemy\NormalEnemy\State\PreTracking">
-      <UniqueIdentifier>{321cb192-2295-4b30-8c03-fa5026a7c0c0}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Project\Enemy\NormalEnemy\State\None">
-      <UniqueIdentifier>{ef55c56a-3765-4ce8-9e81-ef5db8b69654}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Project\Enemy\NormalEnemy\State\Attack">
-      <UniqueIdentifier>{49f16eeb-5e84-491a-980f-6d409f85b8f8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Project\Player\Collision\PlayerCollisionToAudioObject">
-      <UniqueIdentifier>{ce595378-51b4-489b-ad22-3bdf9f98219f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Project\Player\Collision\PlayerCollisionToNormalEnemyAttack">
-      <UniqueIdentifier>{a9a15912-dac9-4dd1-ae7b-ae03c83af842}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Project\Player\Collision\PlayerCollisionToStageObject">
-      <UniqueIdentifier>{34b331b7-5724-4602-b963-a385fdcd454a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Project\Player\Collision\PlayerCollisionToStrongEnemy">
-      <UniqueIdentifier>{7432f915-4798-42a9-a5f0-8b71bd080803}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Project\Player\Light">
-      <UniqueIdentifier>{49355256-8b6e-46a4-a9ea-39d8676cbf2e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Project\Player\Light\FlashLight">
-      <UniqueIdentifier>{d8dbaa74-8099-4ee9-a61b-20473f2f96ed}</UniqueIdentifier>
     </Filter>
     <Filter Include="Elysia">
       <UniqueIdentifier>{abdf560c-0a11-4c32-b8f0-948d3e3b2874}</UniqueIdentifier>
@@ -502,151 +394,22 @@
     <Filter Include="Project\Scene\Lose\Base\ReturnTitle">
       <UniqueIdentifier>{cb91cacc-6572-421d-a9c4-5a4d8f243f6e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Project\Scene\Title\Base">
-      <UniqueIdentifier>{d6d0251b-28e0-44e7-90f0-20d7a6e65870}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Project\Scene\Title\Base\Start">
-      <UniqueIdentifier>{ff0840a8-919c-43cc-9c8c-0c96c55c75ea}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Project\Scene\Title\Base\Waiting">
-      <UniqueIdentifier>{b6f61bc0-90f2-457c-91df-45fe3bdf4f44}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Project\Scene\Title\Base\Noise">
-      <UniqueIdentifier>{bb4f6485-f015-4d80-97c6-0c3947bc8baf}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Project\Scene\Win\Base">
-      <UniqueIdentifier>{5593b3c1-aabc-477a-9ee3-8ea32182ff2a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Project\Scene\Win\Base\ReturnTitle">
-      <UniqueIdentifier>{5ca6554b-7d23-49cc-89a2-44fc4263d9b7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Project\Scene\Win\Base\Select">
-      <UniqueIdentifier>{70e9de86-8286-40f8-822c-e8d3b924ce65}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Project\Scene\Title\Base\ToGame">
-      <UniqueIdentifier>{30f5dc5c-2571-4a90-8fad-db9c892ccd67}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Project\Item\EscapeAssistArrow">
-      <UniqueIdentifier>{34dffcae-5c51-4dd7-a571-7d5ca8c735c8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Project\Object">
-      <UniqueIdentifier>{4870d8ef-96e1-4748-be83-6f3493ee1de9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Project\Object\Gate">
-      <UniqueIdentifier>{04fdbc6f-7a4a-4b0a-ad10-68fef5f36d90}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Project\Object\Door">
-      <UniqueIdentifier>{b3187852-9c39-46bf-89b8-e59f491a9644}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Project\Object\PoltergeistBone">
-      <UniqueIdentifier>{cf46383d-23c8-4c74-8da3-24195e1c6ae5}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Project\Object\Bone">
-      <UniqueIdentifier>{f148d6ae-e8d4-47cc-8dc6-4b3301d79dd7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Project\Object\SurpriseEye">
-      <UniqueIdentifier>{35db72b9-601d-4d19-b18a-ab1b1457793f}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Project\Scene\AudioTest">
       <UniqueIdentifier>{33a2dfb9-161d-4079-b12c-6814c1fea59c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Project\Player\Player.cpp">
-      <Filter>Project\Player</Filter>
-    </ClCompile>
-    <ClCompile Include="Project\Key\Key.cpp">
-      <Filter>Project\Item\Key</Filter>
-    </ClCompile>
-    <ClCompile Include="Project\Key\KeyManager.cpp">
-      <Filter>Project\Item\Key\KeyManager</Filter>
-    </ClCompile>
-    <ClCompile Include="Project\Light\FlashLight\FlashLight.cpp">
-      <Filter>Project\Player\Light\FlashLight</Filter>
-    </ClCompile>
-    <ClCompile Include="Project\Enemy\EnemyManager.cpp">
-      <Filter>Project\Enemy\EnemyManager</Filter>
-    </ClCompile>
-    <ClCompile Include="Project\AllGameScene\TitleScene\TitleScene.cpp">
-      <Filter>Project\Scene\Title</Filter>
-    </ClCompile>
     <ClCompile Include="Project\AllGameScene\LoseScene\LoseScene.cpp">
       <Filter>Project\Scene\Lose</Filter>
     </ClCompile>
-    <ClCompile Include="Project\Player\PlayerCollisionToStrongEnemy.cpp">
-      <Filter>Project\Player\Collision\PlayerCollisionToStrongEnemy</Filter>
-    </ClCompile>
     <ClCompile Include="Project\AllGameScene\GameScene\GameScene.cpp">
       <Filter>Project\Scene\Game</Filter>
-    </ClCompile>
-    <ClCompile Include="Project\Player\PlayerCollisionToNormalEnemyAttack.cpp">
-      <Filter>Project\Player\Collision\PlayerCollisionToNormalEnemyAttack</Filter>
-    </ClCompile>
-    <ClCompile Include="Project\Player\PlayerCollisionToAudioObject.cpp">
-      <Filter>Project\Player\Collision\PlayerCollisionToAudioObject</Filter>
-    </ClCompile>
-    <ClCompile Include="Project\AllGameScene\WinScene\WinScene.cpp">
-      <Filter>Project\Scene\Win</Filter>
-    </ClCompile>
-    <ClCompile Include="Project\Light\FlashLight\FlashLightCollision.cpp">
-      <Filter>Project\Player\Light\FlashLight</Filter>
-    </ClCompile>
-    <ClCompile Include="Project\Player\PlayerCollisionToStageObject.cpp">
-      <Filter>Project\Player\Collision\PlayerCollisionToStageObject</Filter>
-    </ClCompile>
-    <ClCompile Include="Project\Player\AudioTestPlayer.cpp">
-      <Filter>Project\Player\Test</Filter>
     </ClCompile>
     <ClCompile Include="Project\RailCamera\TitleRailCamera.cpp">
       <Filter>Project\Camera\TitleRailCamera</Filter>
     </ClCompile>
     <ClCompile Include="Project\AllGameScene\GameSceneFactory.cpp">
       <Filter>Project\Scene\Factory</Filter>
-    </ClCompile>
-    <ClCompile Include="Project\Player\BasedPlayerCollision.cpp">
-      <Filter>Project\Player\Collision</Filter>
-    </ClCompile>
-    <ClCompile Include="Project\Stage\Gate\Gate.cpp">
-      <Filter>Project\Object\Gate</Filter>
-    </ClCompile>
-    <ClCompile Include="Project\Enemy\NormalEnemy\NormalEnemy.cpp">
-      <Filter>Project\Enemy\NormalEnemy</Filter>
-    </ClCompile>
-    <ClCompile Include="Project\Enemy\NormalEnemy\EnemyAttackCollision.cpp">
-      <Filter>Project\Enemy\NormalEnemy\Collision\EnemyAttackCollision</Filter>
-    </ClCompile>
-    <ClCompile Include="Project\Enemy\NormalEnemy\EnemyFlashLightCollision.cpp">
-      <Filter>Project\Enemy\NormalEnemy\Collision\EnemyFlashLightCollision</Filter>
-    </ClCompile>
-    <ClCompile Include="Project\Enemy\StrongEnemy\StrongEnemy.cpp">
-      <Filter>Project\Enemy\StrongEnemy</Filter>
-    </ClCompile>
-    <ClCompile Include="Project\Enemy\StrongEnemy\State\StrongEnemyNoneMove.cpp">
-      <Filter>Project\Enemy\StrongEnemy\State\NoneMove</Filter>
-    </ClCompile>
-    <ClCompile Include="Project\Enemy\StrongEnemy\State\StrongEnemyMove.cpp">
-      <Filter>Project\Enemy\StrongEnemy\State\Move</Filter>
-    </ClCompile>
-    <ClCompile Include="Project\Enemy\StrongEnemy\State\StrongEnemyTracking.cpp">
-      <Filter>Project\Enemy\StrongEnemy\State\Tracking</Filter>
-    </ClCompile>
-    <ClCompile Include="Project\Enemy\StrongEnemy\StrongEnemyCollisionToPlayer.cpp">
-      <Filter>Project\Enemy\StrongEnemy\Collision</Filter>
-    </ClCompile>
-    <ClCompile Include="Project\Enemy\NormalEnemy\State\NormalEnemyMove.cpp">
-      <Filter>Project\Enemy\NormalEnemy\State\Move</Filter>
-    </ClCompile>
-    <ClCompile Include="Project\Enemy\NormalEnemy\State\NormalEnemyNoneMove.cpp">
-      <Filter>Project\Enemy\NormalEnemy\State\None</Filter>
-    </ClCompile>
-    <ClCompile Include="Project\Enemy\NormalEnemy\State\NormalEnemyTracking.cpp">
-      <Filter>Project\Enemy\NormalEnemy\State\Tracking</Filter>
-    </ClCompile>
-    <ClCompile Include="Project\Enemy\NormalEnemy\State\NormalEnemyPreTracking.cpp">
-      <Filter>Project\Enemy\NormalEnemy\State\PreTracking</Filter>
-    </ClCompile>
-    <ClCompile Include="Project\Enemy\NormalEnemy\State\NormalEnemyAttack.cpp">
-      <Filter>Project\Enemy\NormalEnemy\State\Attack</Filter>
     </ClCompile>
     <ClCompile Include="Elysia\StringOption\StringOption.cpp">
       <Filter>Elysia\Source File\StringOption</Filter>
@@ -837,15 +600,6 @@
     <ClCompile Include="Project\Player\Camera\PlayerCamera.cpp">
       <Filter>Project\Camera\PlayerCamera</Filter>
     </ClCompile>
-    <ClCompile Include="Project\AllGameScene\TitleScene\BaseBackTexture\BaseTitleBackTexture.cpp">
-      <Filter>Project\Scene\Title\BackTexture\Base</Filter>
-    </ClCompile>
-    <ClCompile Include="Project\AllGameScene\TitleScene\BaseBackTexture\Night\NightBackTexture.cpp">
-      <Filter>Project\Scene\Title\BackTexture\Night</Filter>
-    </ClCompile>
-    <ClCompile Include="Project\AllGameScene\TitleScene\BaseBackTexture\Sunset\SunsetBackTexture.cpp">
-      <Filter>Project\Scene\Title\BackTexture\Sunset</Filter>
-    </ClCompile>
     <ClCompile Include="Elysia\Common\DirectX\DirectXSetup.cpp">
       <Filter>Elysia\Source File\DirectX</Filter>
     </ClCompile>
@@ -861,41 +615,11 @@
     <ClCompile Include="Project\AllGameScene\LoseScene\BaseLoseScene\ReturnTitleLoseScene\ReturnTitleLoseScene.cpp">
       <Filter>Project\Scene\Lose\Base\ReturnTitle</Filter>
     </ClCompile>
-    <ClCompile Include="Project\AllGameScene\WinScene\BaseWinScene\SelectWinScene\SelectWinScene.cpp">
-      <Filter>Project\Scene\Win\Base\Select</Filter>
-    </ClCompile>
-    <ClCompile Include="Project\AllGameScene\WinScene\BaseWinScene\ReturnTitleWinScene\ReturnTitleWinScene.cpp">
-      <Filter>Project\Scene\Win\Base\ReturnTitle</Filter>
-    </ClCompile>
-    <ClCompile Include="Project\AllGameScene\TitleScene\BaseTitleScene\Start\StartTitleScene.cpp">
-      <Filter>Project\Scene\Title\Base\Start</Filter>
-    </ClCompile>
-    <ClCompile Include="Project\AllGameScene\TitleScene\BaseTitleScene\Waiting\WaitingTitleScene.cpp">
-      <Filter>Project\Scene\Title\Base\Waiting</Filter>
-    </ClCompile>
-    <ClCompile Include="Project\AllGameScene\TitleScene\BaseTitleScene\Noise\NoiseTitleScene.cpp">
-      <Filter>Project\Scene\Title\Base\Noise</Filter>
-    </ClCompile>
-    <ClCompile Include="Project\AllGameScene\TitleScene\BaseTitleScene\ToGame\ToGameTitleScene.cpp">
-      <Filter>Project\Scene\Title\Base\ToGame</Filter>
-    </ClCompile>
     <ClCompile Include="Elysia\Material\Vignette\Vignette.cpp">
       <Filter>Elysia\Source File\Material</Filter>
     </ClCompile>
     <ClCompile Include="Elysia\Material\RandomNoise\RandomNoise.cpp">
       <Filter>Elysia\Source File\Material</Filter>
-    </ClCompile>
-    <ClCompile Include="Project\EscapeAssistArrow\EscapeAssistArrow.cpp">
-      <Filter>Project\Item\EscapeAssistArrow</Filter>
-    </ClCompile>
-    <ClCompile Include="Project\Stage\Door\Door.cpp">
-      <Filter>Project\Object\Door</Filter>
-    </ClCompile>
-    <ClCompile Include="Project\Stage\PoltergeistBone\PoltergeistBone.cpp">
-      <Filter>Project\Object\PoltergeistBone</Filter>
-    </ClCompile>
-    <ClCompile Include="Project\Stage\SurpriseEye\SurpriseEye.cpp">
-      <Filter>Project\Object\SurpriseEye</Filter>
     </ClCompile>
     <ClCompile Include="Project\AllGameScene\AudioTest\AudioTest.cpp">
       <Filter>Elysia\Source File</Filter>
@@ -1006,56 +730,11 @@
     </FxCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Project\Enemy\BaseEnemy.h">
-      <Filter>Project\Enemy</Filter>
-    </ClInclude>
-    <ClInclude Include="Project\Player\Player.h">
-      <Filter>Project\Player</Filter>
-    </ClInclude>
-    <ClInclude Include="Project\Key\Key.h">
-      <Filter>Project\Item\Key</Filter>
-    </ClInclude>
-    <ClInclude Include="Project\Key\KeyManager.h">
-      <Filter>Project\Item\Key\KeyManager</Filter>
-    </ClInclude>
-    <ClInclude Include="Project\Light\FlashLight\FlashLight.h">
-      <Filter>Project\Player\Light\FlashLight</Filter>
-    </ClInclude>
-    <ClInclude Include="Project\Enemy\EnemyManager.h">
-      <Filter>Project\Enemy\EnemyManager</Filter>
-    </ClInclude>
-    <ClInclude Include="Project\AllGameScene\TitleScene\TitleScene.h">
-      <Filter>Project\Scene\Title</Filter>
-    </ClInclude>
     <ClInclude Include="Project\AllGameScene\LoseScene\LoseScene.h">
       <Filter>Project\Scene\Lose</Filter>
     </ClInclude>
-    <ClInclude Include="Project\Enemy\EnemyCondition.h">
-      <Filter>Project\Enemy</Filter>
-    </ClInclude>
-    <ClInclude Include="Project\Player\PlayerCollisionToStrongEnemy.h">
-      <Filter>Project\Player\Collision\PlayerCollisionToStrongEnemy</Filter>
-    </ClInclude>
     <ClInclude Include="Project\AllGameScene\GameScene\GameScene.h">
       <Filter>Project\Scene\Game</Filter>
-    </ClInclude>
-    <ClInclude Include="Project\Player\PlayerCollisionToNormalEnemyAttack.h">
-      <Filter>Project\Player\Collision\PlayerCollisionToNormalEnemyAttack</Filter>
-    </ClInclude>
-    <ClInclude Include="Project\Player\PlayerCollisionToAudioObject.h">
-      <Filter>Project\Player\Collision\PlayerCollisionToAudioObject</Filter>
-    </ClInclude>
-    <ClInclude Include="Project\AllGameScene\WinScene\WinScene.h">
-      <Filter>Project\Scene\Win</Filter>
-    </ClInclude>
-    <ClInclude Include="Project\Light\FlashLight\FlashLightCollision.h">
-      <Filter>Project\Player\Light\FlashLight</Filter>
-    </ClInclude>
-    <ClInclude Include="Project\Player\AudioTestPlayer.h">
-      <Filter>Project\Player\Test</Filter>
-    </ClInclude>
-    <ClInclude Include="Project\Player\PlayerCollisionToStageObject.h">
-      <Filter>Project\Player\Collision\PlayerCollisionToStageObject</Filter>
     </ClInclude>
     <ClInclude Include="Project\RailCamera\TitleRailCamera.h">
       <Filter>Project\Camera\TitleRailCamera</Filter>
@@ -1063,59 +742,8 @@
     <ClInclude Include="Project\CollisionConfig\CollisionConfig.h">
       <Filter>Project</Filter>
     </ClInclude>
-    <ClInclude Include="Project\Player\BasePlayerCollision.h">
-      <Filter>Project\Player\Collision</Filter>
-    </ClInclude>
     <ClInclude Include="Project\AllGameScene\GameSceneFactory.h">
       <Filter>Project\Scene\Factory</Filter>
-    </ClInclude>
-    <ClInclude Include="Project\Stage\Gate\Gate.h">
-      <Filter>Project\Object\Gate</Filter>
-    </ClInclude>
-    <ClInclude Include="Project\Enemy\NormalEnemy\NormalEnemy.h">
-      <Filter>Project\Enemy\NormalEnemy</Filter>
-    </ClInclude>
-    <ClInclude Include="Project\Enemy\NormalEnemy\EnemyAttackCollision.h">
-      <Filter>Project\Enemy\NormalEnemy\Collision\EnemyAttackCollision</Filter>
-    </ClInclude>
-    <ClInclude Include="Project\Enemy\NormalEnemy\EnemyFlashLightCollision.h">
-      <Filter>Project\Enemy\NormalEnemy\Collision\EnemyFlashLightCollision</Filter>
-    </ClInclude>
-    <ClInclude Include="Project\Enemy\StrongEnemy\StrongEnemy.h">
-      <Filter>Project\Enemy\StrongEnemy</Filter>
-    </ClInclude>
-    <ClInclude Include="Project\Enemy\StrongEnemy\State\BaseStongEnemyState.h">
-      <Filter>Project\Enemy\StrongEnemy\State</Filter>
-    </ClInclude>
-    <ClInclude Include="Project\Enemy\StrongEnemy\State\StrongEnemyNoneMove.h">
-      <Filter>Project\Enemy\StrongEnemy\State\NoneMove</Filter>
-    </ClInclude>
-    <ClInclude Include="Project\Enemy\StrongEnemy\State\StrongEnemyMove.h">
-      <Filter>Project\Enemy\StrongEnemy\State\Move</Filter>
-    </ClInclude>
-    <ClInclude Include="Project\Enemy\StrongEnemy\State\StrongEnemyTracking.h">
-      <Filter>Project\Enemy\StrongEnemy\State\Tracking</Filter>
-    </ClInclude>
-    <ClInclude Include="Project\Enemy\StrongEnemy\StrongEnemyCollisionToPlayer.h">
-      <Filter>Project\Enemy\StrongEnemy\Collision</Filter>
-    </ClInclude>
-    <ClInclude Include="Project\Enemy\NormalEnemy\State\BaseNormalEnemyState.h">
-      <Filter>Project\Enemy\NormalEnemy\State</Filter>
-    </ClInclude>
-    <ClInclude Include="Project\Enemy\NormalEnemy\State\NormalEnemyMove.h">
-      <Filter>Project\Enemy\NormalEnemy\State\Move</Filter>
-    </ClInclude>
-    <ClInclude Include="Project\Enemy\NormalEnemy\State\NormalEnemyNoneMove.h">
-      <Filter>Project\Enemy\NormalEnemy\State\None</Filter>
-    </ClInclude>
-    <ClInclude Include="Project\Enemy\NormalEnemy\State\NormalEnemyTracking.h">
-      <Filter>Project\Enemy\NormalEnemy\State\Tracking</Filter>
-    </ClInclude>
-    <ClInclude Include="Project\Enemy\NormalEnemy\State\NormalEnemyPreTracking.h">
-      <Filter>Project\Enemy\NormalEnemy\State\PreTracking</Filter>
-    </ClInclude>
-    <ClInclude Include="Project\Enemy\NormalEnemy\State\NormalEnemyAttack.h">
-      <Filter>Project\Enemy\NormalEnemy\State\Attack</Filter>
     </ClInclude>
     <ClInclude Include="Elysia\StringOption\StringOption.h">
       <Filter>Elysia\Header File\StringOption</Filter>
@@ -1417,15 +1045,6 @@
     <ClInclude Include="Project\Player\Camera\PlayerCamera.h">
       <Filter>Project\Camera\PlayerCamera</Filter>
     </ClInclude>
-    <ClInclude Include="Project\AllGameScene\TitleScene\BaseBackTexture\BaseTitleBackTexture.h">
-      <Filter>Project\Scene\Title\BackTexture\Base</Filter>
-    </ClInclude>
-    <ClInclude Include="Project\AllGameScene\TitleScene\BaseBackTexture\Night\NightBackTexture.h">
-      <Filter>Project\Scene\Title\BackTexture\Night</Filter>
-    </ClInclude>
-    <ClInclude Include="Project\AllGameScene\TitleScene\BaseBackTexture\Sunset\SunsetBackTexture.h">
-      <Filter>Project\Scene\Title\BackTexture\Sunset</Filter>
-    </ClInclude>
     <ClInclude Include="Elysia\Common\DirectX\DirectXSetup.h">
       <Filter>Elysia\Header File\DirectX</Filter>
     </ClInclude>
@@ -1444,47 +1063,11 @@
     <ClInclude Include="Project\AllGameScene\LoseScene\BaseLoseScene\ReturnTitleLoseScene\ReturnTitleLoseScene.h">
       <Filter>Project\Scene\Lose\Base\ReturnTitle</Filter>
     </ClInclude>
-    <ClInclude Include="Project\AllGameScene\WinScene\BaseWinScene\BaseWinScene.h">
-      <Filter>Project\Scene\Win\Base</Filter>
-    </ClInclude>
-    <ClInclude Include="Project\AllGameScene\WinScene\BaseWinScene\SelectWinScene\SelectWinScene.h">
-      <Filter>Project\Scene\Win\Base\Select</Filter>
-    </ClInclude>
-    <ClInclude Include="Project\AllGameScene\WinScene\BaseWinScene\ReturnTitleWinScene\ReturnTitleWinScene.h">
-      <Filter>Project\Scene\Win\Base\ReturnTitle</Filter>
-    </ClInclude>
-    <ClInclude Include="Project\AllGameScene\TitleScene\BaseTitleScene\BaseTitleScene.h">
-      <Filter>Project\Scene\Title\Base</Filter>
-    </ClInclude>
-    <ClInclude Include="Project\AllGameScene\TitleScene\BaseTitleScene\Start\StartTitleScene.h">
-      <Filter>Project\Scene\Title\Base\Start</Filter>
-    </ClInclude>
-    <ClInclude Include="Project\AllGameScene\TitleScene\BaseTitleScene\Waiting\WaitingTitleScene.h">
-      <Filter>Project\Scene\Title\Base\Waiting</Filter>
-    </ClInclude>
-    <ClInclude Include="Project\AllGameScene\TitleScene\BaseTitleScene\Noise\NoiseTitleScene.h">
-      <Filter>Project\Scene\Title\Base\Noise</Filter>
-    </ClInclude>
-    <ClInclude Include="Project\AllGameScene\TitleScene\BaseTitleScene\ToGame\ToGameTitleScene.h">
-      <Filter>Project\Scene\Title\Base\ToGame</Filter>
-    </ClInclude>
     <ClInclude Include="Elysia\Material\Vignette\Vignette.h">
       <Filter>Elysia\Header File\Material</Filter>
     </ClInclude>
     <ClInclude Include="Elysia\Material\RandomNoise\RandomNoise.h">
       <Filter>Elysia\Header File\Material</Filter>
-    </ClInclude>
-    <ClInclude Include="Project\EscapeAssistArrow\EscapeAssistArrow.h">
-      <Filter>Project\Item\EscapeAssistArrow</Filter>
-    </ClInclude>
-    <ClInclude Include="Project\Stage\Door\Door.h">
-      <Filter>Project\Object\Door</Filter>
-    </ClInclude>
-    <ClInclude Include="Project\Stage\PoltergeistBone\PoltergeistBone.h">
-      <Filter>Project\Object\PoltergeistBone</Filter>
-    </ClInclude>
-    <ClInclude Include="Project\Stage\SurpriseEye\SurpriseEye.h">
-      <Filter>Project\Object\SurpriseEye</Filter>
     </ClInclude>
     <ClInclude Include="Project\AllGameScene\AudioTest\AudioTest.h">
       <Filter>Elysia\Header File</Filter>

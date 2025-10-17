@@ -73,9 +73,9 @@ void Elysia::Sprite::Initialize(const uint32_t& textureHandle, const Vector2& po
 
 
 
-Elysia::Sprite* Elysia::Sprite::Create(const uint32_t& textureHandle, const Vector2& position) {
+std::unique_ptr<Elysia::Sprite> Elysia::Sprite::Create(const uint32_t& textureHandle, const Vector2& position) {
 	//生成
-	Elysia::Sprite* sprite = new Elysia::Sprite();
+	std::unique_ptr<Elysia::Sprite> sprite = std::make_unique<Elysia::Sprite>();
 	
 	//初期化
 	sprite->Initialize(textureHandle,position);

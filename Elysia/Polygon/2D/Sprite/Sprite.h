@@ -53,7 +53,7 @@ namespace Elysia {
 		/// <param name="textureHandle">ハンドル</param>
 		/// <param name="position">座標</param>
 		/// <returns>スプライト</returns>
-		static Sprite* Create(const uint32_t& textureHandle, const Vector2& position);
+		static std::unique_ptr<Sprite> Create(const uint32_t& textureHandle, const Vector2& position);
 
 		/// <summary>
 		/// 描画
