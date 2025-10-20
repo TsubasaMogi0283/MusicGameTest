@@ -103,10 +103,26 @@ struct NoteInstance {
 	//ノーツのスプライト
 	std::unique_ptr<Elysia::Sprite> noteSprite=nullptr;
 
+	bool isJudged = false;
 
 	//
-	bool isPlaySE_ = false;
+	bool isPlaySE = false;
 };
+
+enum NoteJudgementSelection {
+	Perfect,
+	Great,
+	Good,
+	Miss,
+};
+
+struct NoteJudgementResult {
+	int32_t perfect;
+	int32_t great;
+	int32_t good;
+	int32_t miss;
+};
+
 
 /// <summary>
 /// ゲームシーン
@@ -250,5 +266,12 @@ private:
 	float_t musicTime_ = 0.0f;
 
 	uint32_t arraiveSEHandle_ = 0u;
+
+
+private:
+	//判定
+	NoteJudgementResult result_ = {};
+	//タッチ
+	Note touch_ = {};
 
 };

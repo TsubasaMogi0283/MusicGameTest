@@ -262,7 +262,116 @@ void GameScene::Initialize() {
 				{ 0, 0, 0 },
 				{ 0, 1, 0 },
 				{ 0, 0, 0 },
-				{ 1, 0,  },
+				{ 1, 0, 0 },
+				{ 0, 0, 0 },
+				{ 1, 0, 0 },
+				{ 0, 1, 0 },
+				{ 1, 0, 1 },
+				{ 0, 0, 0 },
+				{ 0, 0, 1 },
+				{ 0, 0, 0 },
+			},
+
+			// 2. bpm の値
+			170,
+
+		},
+
+
+		//1
+		{
+			// 1
+			{
+				{ 0, 1, 0 },
+				{ 1, 0, 1 },
+				{ 0, 1, 0 },
+				{ 0, 0, 0 },
+				{ 1, 0, 1 },
+				{ 0, 0, 0 },
+				{ 0, 1, 0 },
+				{ 1, 0, 1 },
+				{ 0, 1, 0 },
+				{ 0, 0, 0 },
+				{ 1, 0, 1 },
+				{ 0, 0, 0 },
+				{ 1, 0, 0 },
+				{ 0, 1, 0 },
+				{ 0, 0, 1 },
+				{ 0, 1, 0 },
+			},
+
+			// 2. bpm の値
+			170,
+
+		},
+
+		//1
+		{
+			// 1
+			{
+				{ 1, 0, 1 },
+				{ 0, 0, 0 },
+				{ 0, 0, 1 },
+				{ 1, 0, 0 },
+				{ 0, 0, 1 },
+				{ 0, 0, 0 },
+				{ 0, 1, 0 },
+				{ 0, 0, 0 },
+				{ 1, 0, 0 },
+				{ 0, 0, 0 },
+				{ 1, 0, 0 },
+				{ 0, 1, 0 },
+				{ 1, 0, 1 },
+				{ 0, 0, 0 },
+				{ 0, 0, 1 },
+				{ 0, 0, 0 },
+			},
+
+			// 2. bpm の値
+			170,
+
+		},
+
+
+		//1
+		{
+			// 1
+			{
+				{ 0, 1, 0 },
+				{ 1, 0, 1 },
+				{ 0, 1, 0 },
+				{ 0, 0, 0 },
+				{ 1, 0, 1 },
+				{ 0, 0, 0 },
+				{ 0, 1, 0 },
+				{ 1, 0, 1 },
+				{ 0, 1, 0 },
+				{ 0, 0, 0 },
+				{ 1, 0, 1 },
+				{ 0, 0, 0 },
+				{ 1, 0, 0 },
+				{ 0, 1, 0 },
+				{ 0, 0, 1 },
+				{ 0, 1, 0 },
+			},
+
+			// 2. bpm の値
+			170,
+
+		},
+		//1
+		{
+			// 1
+			{
+				{ 1, 0, 1 },
+				{ 0, 0, 0 },
+				{ 0, 0, 1 },
+				{ 1, 0, 0 },
+				{ 0, 0, 1 },
+				{ 0, 0, 0 },
+				{ 0, 1, 0 },
+				{ 0, 0, 0 },
+				{ 1, 0, 0 },
 				{ 0, 0, 0 },
 				{ 1, 0, 0 },
 				{ 0, 1, 0 },
@@ -349,10 +458,29 @@ void GameScene::Initialize() {
 				{ 0, 0, 0 },
 				{ 1, 0, 1 },
 				{ 0, 0, 0 },
+				{ 0, 1, 0 },
+				{ 0, 0, 0 },
+				{ 0, 1, 0 },
+				{ 0, 0, 0 },
+			},
+
+			// 2. bpm の値
+			170,
+
+		},
+
+		//1
+		{
+			// 1
+			{
 				{ 1, 0, 0 },
+				{ 0, 0, 0 },
+				{ 0, 0, 0 },
 				{ 0, 1, 0 },
+				{ 0, 1, 0 },
+				{ 0, 0, 0 },
 				{ 0, 0, 1 },
-				{ 0, 1, 0 },
+				{ 0, 0, 0 },
 			},
 
 			// 2. bpm の値
@@ -366,120 +494,10 @@ void GameScene::Initialize() {
 				{ 1, 0, 1 },
 				{ 0, 0, 0 },
 				{ 0, 0, 1 },
-				{ 1, 0, 0 },
-				{ 0, 0, 1 },
-				{ 0, 0, 0 },
 				{ 0, 1, 0 },
-				{ 0, 0, 0 },
-				{ 1, 0,  },
+				{ 1, 0, 0 },
 				{ 0, 0, 0 },
 				{ 1, 0, 0 },
-				{ 0, 1, 0 },
-				{ 1, 0, 1 },
-				{ 0, 0, 0 },
-				{ 0, 0, 1 },
-				{ 0, 0, 0 },
-			},
-
-			// 2. bpm の値
-			170,
-
-		},
-
-
-		//1
-		{
-			// 1
-			{
-				{ 0, 1, 0 },
-				{ 1, 0, 1 },
-				{ 0, 1, 0 },
-				{ 0, 0, 0 },
-				{ 1, 0, 1 },
-				{ 0, 0, 0 },
-				{ 0, 1, 0 },
-				{ 1, 0, 1 },
-				{ 0, 1, 0 },
-				{ 0, 0, 0 },
-				{ 1, 0, 1 },
-				{ 0, 0, 0 },
-				{ 1, 0, 0 },
-				{ 0, 1, 0 },
-				{ 0, 0, 1 },
-				{ 0, 1, 0 },
-			},
-
-			// 2. bpm の値
-			170,
-
-		},
-
-		//1
-		{
-			// 1
-			{
-				{ 1, 0, 1 },
-				{ 0, 0, 0 },
-				{ 0, 0, 1 },
-				{ 1, 0, 0 },
-				{ 0, 0, 1 },
-				{ 0, 0, 0 },
-				{ 0, 1, 0 },
-				{ 0, 0, 0 },
-				{ 1, 0,  },
-				{ 0, 0, 0 },
-				{ 1, 0, 0 },
-				{ 0, 1, 0 },
-				{ 1, 0, 1 },
-				{ 0, 0, 0 },
-				{ 0, 0, 1 },
-				{ 0, 0, 0 },
-			},
-
-			// 2. bpm の値
-			170,
-
-		},
-
-
-		//1
-		{
-			// 1
-			{
-				{ 0, 1, 0 },
-				{ 1, 0, 1 },
-				{ 0, 1, 0 },
-				{ 0, 0, 0 },
-				{ 1, 0, 1 },
-				{ 0, 0, 0 },
-				{ 0, 1, 0 },
-				{ 1, 0, 1 },
-				{ 0, 1, 0 },
-				{ 0, 0, 0 },
-				{ 1, 0, 1 },
-				{ 0, 0, 0 },
-				{ 1, 0, 0 },
-				{ 0, 1, 0 },
-				{ 0, 0, 1 },
-				{ 0, 1, 0 },
-			},
-
-			// 2. bpm の値
-			170,
-
-		},
-
-		//1
-		{
-			// 1
-			{
-				{ 1, 0, 0 },
-				{ 1, 0, 0 },
-				{ 0, 0, 1 },
-				{ 0, 0, 0 },
-				{ 0, 1, 0 },
-				{ 0, 1, 0 },
-				{ 0, 0, 0 },
 				{ 0, 1, 0 },
 			},
 
@@ -491,20 +509,39 @@ void GameScene::Initialize() {
 		{
 			// 1
 			{
+				{ 0, 1, 1 },
+				{ 0, 0, 0 },
+				{ 0, 0, 0 },
+				{ 0, 0, 1 },
+				{ 0, 0, 1 },
 				{ 0, 0, 0 },
 				{ 1, 0, 0 },
-				{ 1, 0, 0 },
 				{ 0, 0, 0 },
-				{ 0, 1, 0 },
-				{ 0, 0, 0 },
-				{ 1, 0, 0 },
-				{ 0, 1, 0 },
 			},
 
 			// 2. bpm の値
 			170,
 
 		},
+		//1
+		{
+			// 1
+			{
+				{ 0, 1, 0 },
+				{ 0, 0, 1 },
+				{ 0, 0, 0 },
+				{ 0, 0, 1 },
+				{ 0, 0, 0 },
+				{ 0, 0, 0 },
+				{ 0, 0, 0 },
+				{ 0, 0, 0 },
+			},
+
+			// 2. bpm の値
+			170,
+
+		},
+
 	};
 
 	notesData_=newNotesData;
@@ -630,9 +667,9 @@ void GameScene::Update(Elysia::GameManager* gameManager) {
 				ImGui::InputFloat("Y座標", &positionY);
 				ImGui::End();
 
-				if (!note.isPlaySE_&& moveRatio>=1.0f) {
+				if (!note.isPlaySE&& moveRatio>=1.0f) {
 					audio_->Play(arraiveSEHandle_, false);
-					note.isPlaySE_ = true;
+					note.isPlaySE = true;
 				}
 
 #endif // _DEBUG
@@ -640,10 +677,56 @@ void GameScene::Update(Elysia::GameManager* gameManager) {
 				//各レーンの入力処理と判定の処理
 				//時間差で取る
 
-				//-0.5fより下回ったら強制的にミス判定
-				if (judgementTime < -0.5f) {
+				int closestNoteIndex = -1;
+				float_t minAbsJudgementTime = 9999.0f; // 大きな値で初期化
+				int hitLaneType = -1; // どのレーンで入力があったかを記録（G:0, H:1, J:2 など）
 
+				// 2. キー入力のチェックと、入力があったレーンの決定
+				if (input_->IsTriggerKey(DIK_G) == true) {
+					touch_.left++;
+					hitLaneType = 0; // 例：レーン0
 				}
+				else if (input_->IsTriggerKey(DIK_H) == true) {
+					touch_.middle++;
+					hitLaneType = 1; // 例：レーン1
+				}
+				else if (input_->IsTriggerKey(DIK_J) == true) {
+					touch_.right++;
+					hitLaneType = 2; // 例：レーン2
+				}
+
+
+
+				// キー入力があった場合のみ、最も近いノーツを探す
+				if (hitLaneType != -1) {
+					// 既に判定済み、または画面外（判定許容時間外）のノーツはスキップ
+						// note.isJudged のようなフラグが必要です。
+					if (note.isJudged || musicTime_ < note.startMoveTime) {
+						continue;
+					}
+
+					// ノーツのレーンが入力されたレーンと一致するか
+					// note.laneType にレーン情報が入っていると仮定
+					if (note.lane != hitLaneType) {
+						continue;
+					}
+
+					// 判定時間を計算
+					//float judgementTime = note.judgementArrivalTime - musicTime_;
+					float absJudgementTime = std::abs(judgementTime);
+
+					// 判定可能範囲内のチェック（例: -0.5秒〜+0.5秒）
+					if (absJudgementTime <= 0.5f) { // 許容判定時間
+						// 現在見つかっている中で最も判定時間が近いノーツか？
+						if (absJudgementTime < minAbsJudgementTime) {
+							minAbsJudgementTime = absJudgementTime;
+							closestNoteIndex = 0;
+						}
+					}
+				}
+
+
+
 
 			}
 		}
@@ -669,6 +752,21 @@ void GameScene::Update(Elysia::GameManager* gameManager) {
 
 void GameScene::DisplayImGui() {
 	ImGui::Begin("ゲームシーン");
+	if(ImGui::TreeNode("判定") == true) {
+		ImGui::InputInt("Perfect", &result_.perfect);
+		ImGui::InputInt("Great", &result_.great);
+		ImGui::InputInt("Good", &result_.good);
+		ImGui::InputInt("Miss", &result_.miss);
+		ImGui::TreePop();
+	}
+
+	if (ImGui::TreeNode("入力") == true) {
+		ImGui::InputInt("左", &touch_.left);
+		ImGui::InputInt("中", &touch_.middle);
+		ImGui::InputInt("右", &touch_.right);
+		ImGui::TreePop();
+	}
+
 	ImGui::InputFloat("待機", &waitingTime_);
 	ImGui::InputFloat("開始", &startTime_);
 	ImGui::InputFloat("再生時間", &musicTime_);
