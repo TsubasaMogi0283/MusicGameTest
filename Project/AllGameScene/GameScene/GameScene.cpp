@@ -638,7 +638,31 @@ void GameScene::Update(Elysia::GameManager* gameManager) {
 		// 再生時間を取得
 		musicTime_ = audio_->GetPlayCurrentTime(musicHandle_);
 		noteMoveTime_ = musicTime_- START_OFFSET_TIME_;
-		for (auto& note : noteInstances_) {
+
+
+		int closestNoteIndex = -1;
+		float_t minAbsJudgementTime = 9999.0f; // 大きな値で初期化
+		int hitLaneType = -1; // どのレーンで入力があったかを記録（G:0, H:1, J:2 など）
+
+		// 2. キー入力のチェックと、入力があったレーンの決定
+		if (input_->IsTriggerKey(DIK_G) == true) {
+			touch_.left++;
+			hitLaneType = 0; // 例：レーン0
+		}
+		else if (input_->IsTriggerKey(DIK_H) == true) {
+			touch_.middle++;
+			hitLaneType = 1; // 例：レーン1
+		}
+		else if (input_->IsTriggerKey(DIK_J) == true) {
+			touch_.right++;
+			hitLaneType = 2; // 例：レーン2
+		}
+
+
+
+		for (int i = 0; i < noteInstances_.size(); ++i) {
+			auto& note = noteInstances_[i];
+
 			//画面外は非表示
 			if (musicTime_ < note.startMoveTime) {
 				note.isDisplay = false;
@@ -677,24 +701,7 @@ void GameScene::Update(Elysia::GameManager* gameManager) {
 				//各レーンの入力処理と判定の処理
 				//時間差で取る
 
-				int closestNoteIndex = -1;
-				float_t minAbsJudgementTime = 9999.0f; // 大きな値で初期化
-				int hitLaneType = -1; // どのレーンで入力があったかを記録（G:0, H:1, J:2 など）
-
-				// 2. キー入力のチェックと、入力があったレーンの決定
-				if (input_->IsTriggerKey(DIK_G) == true) {
-					touch_.left++;
-					hitLaneType = 0; // 例：レーン0
-				}
-				else if (input_->IsTriggerKey(DIK_H) == true) {
-					touch_.middle++;
-					hitLaneType = 1; // 例：レーン1
-				}
-				else if (input_->IsTriggerKey(DIK_J) == true) {
-					touch_.right++;
-					hitLaneType = 2; // 例：レーン2
-				}
-
+				
 
 
 				// キー入力があった場合のみ、最も近いノーツを探す
