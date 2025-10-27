@@ -605,7 +605,7 @@ void GameScene::Initialize() {
 		}
 		totalTime += 4.0f * beatDuration; // 小節分進める
 	}
-	noteInstances_;
+
 
 	//読み込み
 	musicHandle_ = audio_->Load("Resources/Audio/Sample2.mp3");
@@ -649,11 +649,11 @@ void GameScene::Update(Elysia::GameManager* gameManager) {
 			touch_.left++;
 			hitLaneType = 0; // 例：レーン0
 		}
-		else if (input_->IsTriggerKey(DIK_H) == true) {
+		if (input_->IsTriggerKey(DIK_H) == true) {
 			touch_.middle++;
 			hitLaneType = 1; // 例：レーン1
 		}
-		else if (input_->IsTriggerKey(DIK_J) == true) {
+		if (input_->IsTriggerKey(DIK_J) == true) {
 			touch_.right++;
 			hitLaneType = 2; // 例：レーン2
 		}
@@ -662,13 +662,6 @@ void GameScene::Update(Elysia::GameManager* gameManager) {
 
 		for (int i = 0; i < noteInstances_.size(); ++i) {
 			auto& note = noteInstances_[i];
-
-			//画面外は非表示
-			if (musicTime_ < note.startMoveTime) {
-				note.isDisplay = false;
-			}
-			//画面の表示
-			else {
 
 				//判定時間
 				float_t judgementTime = note.judgementArrivalTime - musicTime_;
@@ -697,12 +690,6 @@ void GameScene::Update(Elysia::GameManager* gameManager) {
 				}
 
 #endif // _DEBUG
-
-				//各レーンの入力処理と判定の処理
-				//時間差で取る
-
-				
-
 
 				// キー入力があった場合のみ、最も近いノーツを探す
 				if (hitLaneType != -1) {
@@ -735,7 +722,6 @@ void GameScene::Update(Elysia::GameManager* gameManager) {
 
 
 
-			}
 		}
 	}
 
