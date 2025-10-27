@@ -569,7 +569,7 @@ void GameScene::Initialize() {
 			if (note.left == 1) {
 				noteInstances_.emplace_back(
 					//レーン
-					0,
+					LanePosition::Left,
 					//判定線到着時間
 					totalTime + i * noteInterval,
 					totalTime + i * noteInterval - startTime,
@@ -582,7 +582,7 @@ void GameScene::Initialize() {
 			if (note.middle == 1) {
 				noteInstances_.emplace_back(
 					//レーン
-					1, 
+					LanePosition::Middle,
 					totalTime + i * noteInterval,
 					totalTime + i * noteInterval - startTime,
 					true,
@@ -594,7 +594,7 @@ void GameScene::Initialize() {
 				
 				noteInstances_.emplace_back(
 					//レーン
-					2,
+					LanePosition::Right,
 					totalTime + i * noteInterval,
 					totalTime + i * noteInterval - startTime,
 					true,
@@ -640,22 +640,22 @@ void GameScene::Update(Elysia::GameManager* gameManager) {
 		noteMoveTime_ = musicTime_- START_OFFSET_TIME_;
 
 
-		int closestNoteIndex = -1;
-		float_t minAbsJudgementTime = 9999.0f; // 大きな値で初期化
+
+
 		int hitLaneType = -1; // どのレーンで入力があったかを記録（G:0, H:1, J:2 など）
 
 		// 2. キー入力のチェックと、入力があったレーンの決定
 		if (input_->IsTriggerKey(DIK_G) == true) {
 			touch_.left++;
-			hitLaneType = 0; // 例：レーン0
+			hitLaneType = LanePosition::Left; // 例：レーン0
 		}
 		if (input_->IsTriggerKey(DIK_H) == true) {
 			touch_.middle++;
-			hitLaneType = 1; // 例：レーン1
+			hitLaneType = LanePosition::Middle; // 例：レーン1
 		}
 		if (input_->IsTriggerKey(DIK_J) == true) {
 			touch_.right++;
-			hitLaneType = 2; // 例：レーン2
+			hitLaneType = LanePosition::Right; // 例：レーン2
 		}
 
 
@@ -663,64 +663,60 @@ void GameScene::Update(Elysia::GameManager* gameManager) {
 		for (int i = 0; i < noteInstances_.size(); ++i) {
 			auto& note = noteInstances_[i];
 
-				//判定時間
-				float_t judgementTime = note.judgementArrivalTime - musicTime_;
+
+			//判定時間
+			float_t judgementTime = note.judgementArrivalTime - musicTime_;
+			//開始から判定までどのくらいの位置にいるかを計算
+			float_t moveRatio = SingleCalculation::InverseLerp(note.startMoveTime, note.judgementArrivalTime, musicTime_);
+			//座標の計算
+			float_t positionY = SingleCalculation::Lerp(WAITING_POSITION_Y_, JUDGEMENT_POSITION_Y_, moveRatio);
+			//設定
+			note.noteSprite->SetPositionY(positionY);
+
+			//入力されたとき
+			if (hitLaneType != -1) {
+				//レーンの位置
+				switch (note.lane) {
+				case LanePosition::Left:
 
 
-				//開始から判定までどのくらいの位置にいるかを計算
-				float_t moveRatio = SingleCalculation::InverseLerp(note.startMoveTime, note.judgementArrivalTime, musicTime_);
+					break;
+
+				case LanePosition::Middle:
 
 
-				
+					break;
 
-				//座標の計算
-				float_t positionY = SingleCalculation::Lerp(WAITING_POSITION_Y_, JUDGEMENT_POSITION_Y_, moveRatio);
-				note.noteSprite->SetPositionY(positionY);
+				case LanePosition::Right:
+
+
+					break;
+				}
+
+				if (judgementTime < PERFECT_TAP_) {
+					result_.perfect++;
+					
+				}
+
+
+				note.isJudged = true;
+			}
+
+
 
 #ifdef _DEBUG
-				ImGui::Begin("ノーツ");
-				ImGui::InputFloat("判定時間", &judgementTime);
-				ImGui::InputFloat("割合", &moveRatio);
-				ImGui::InputFloat("Y座標", &positionY);
-				ImGui::End();
+			ImGui::Begin("ノーツ");
+			ImGui::InputFloat("判定時間", &judgementTime);
+			ImGui::InputFloat("割合", &moveRatio);
+			ImGui::InputFloat("Y座標", &positionY);
+			ImGui::End();
 
-				if (!note.isPlaySE&& moveRatio>=1.0f) {
-					audio_->Play(arraiveSEHandle_, false);
-					note.isPlaySE = true;
-				}
+			if (!note.isPlaySE&& moveRatio>=1.0f) {
+				audio_->Play(arraiveSEHandle_, false);
+				note.isPlaySE = true;
+			}
 
 #endif // _DEBUG
-
-				// キー入力があった場合のみ、最も近いノーツを探す
-				if (hitLaneType != -1) {
-					// 既に判定済み、または画面外（判定許容時間外）のノーツはスキップ
-						// note.isJudged のようなフラグが必要です。
-					if (note.isJudged || musicTime_ < note.startMoveTime) {
-						continue;
-					}
-
-					// ノーツのレーンが入力されたレーンと一致するか
-					// note.laneType にレーン情報が入っていると仮定
-					if (note.lane != hitLaneType) {
-						continue;
-					}
-
-					// 判定時間を計算
-					//float judgementTime = note.judgementArrivalTime - musicTime_;
-					float absJudgementTime = std::abs(judgementTime);
-
-					// 判定可能範囲内のチェック（例: -0.5秒〜+0.5秒）
-					if (absJudgementTime <= 0.5f) { // 許容判定時間
-						// 現在見つかっている中で最も判定時間が近いノーツか？
-						if (absJudgementTime < minAbsJudgementTime) {
-							minAbsJudgementTime = absJudgementTime;
-							closestNoteIndex = 0;
-						}
-					}
-				}
-
-
-
 
 		}
 	}

@@ -72,18 +72,26 @@ namespace Elysia {
 	class Audio;
 }
 
-struct Note {
+struct NotePosition {
 	int32_t left;
 	int32_t middle;
 	int32_t right;
 };
+
+enum LanePosition {
+	Left,
+	Middle,
+	Right,
+};
+
+
 /// <summary>
 /// 1小節
 /// </summary>
 struct NoteBar {
 
 	//ノーツの数
-	std::vector<Note >notes;
+	std::vector<NotePosition >notes;
 	//BPM
 	uint32_t bpm;
 };
@@ -210,6 +218,17 @@ private:
 	//動き出す時間のオフセット
 	const float_t START_OFFSET_TIME_ = 1.0f;
 
+
+	//判定
+	//パーフェクト
+	const float_t PERFECT_TAP_ = 0.4f;
+	//グレート
+	const float_t GREAT_TAP_ = 0.7f;
+	//グッド
+	const float_t GOOD_TAP_ = 0.8f;
+	//ミス
+	const float_t MISS_TAP_ = 1.0f;
+
 private:
 	
 	// ノーツが画面上端から判定線まで移動する基本時間（秒）
@@ -272,6 +291,6 @@ private:
 	//判定
 	NoteJudgementResult result_ = {};
 	//タッチ
-	Note touch_ = {};
+	NotePosition touch_ = {};
 
 };
