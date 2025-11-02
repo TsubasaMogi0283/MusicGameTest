@@ -72,6 +72,8 @@ void GameScene::Initialize() {
 	part_=Elysia::Sprite::Create(partTextureHandle_, { 0.0f,0.0f });
 	part_->SetInvisible(true);
 
+
+	//CSVに移行する
 	std::vector<NoteBar> newNotesData = {
 		//1
 		{
@@ -544,8 +546,6 @@ void GameScene::Initialize() {
 
 	};
 
-	notesData_=newNotesData;
-
 	uint32_t noteTextureHandle = textureManager_->Load("Resources/Sprite/Note.png");
 	noteRadius_ = static_cast<uint32_t>(textureManager_->GetTextureHeight(noteTextureHandle)/2u);
 
@@ -556,7 +556,7 @@ void GameScene::Initialize() {
 	//開始時間の設定
 	float_t startTime = START_OFFSET_TIME_;
 
-	for (const auto& bar : notesData_) {
+	for (const auto& bar : newNotesData) {
 		//1拍の秒数
 		float_t beatDuration = 60.0f / bar.bpm;
 		//ノーツ間隔（1小節4拍）
@@ -567,7 +567,9 @@ void GameScene::Initialize() {
 
 			// 3レーン分チェック
 			if (note.left == 1) {
-				noteInstances_.emplace_back(
+
+
+				leftNoteInstances_.emplace_back(
 					//レーン
 					LanePosition::Left,
 					//判定線到着時間
@@ -580,7 +582,10 @@ void GameScene::Initialize() {
 
 			}
 			if (note.middle == 1) {
-				noteInstances_.emplace_back(
+
+
+
+				middleNoteInstances_.emplace_back(
 					//レーン
 					LanePosition::Middle,
 					totalTime + i * noteInterval,
@@ -591,8 +596,9 @@ void GameScene::Initialize() {
 				);
 			}
 			if (note.right == 1) {
-				
-				noteInstances_.emplace_back(
+
+
+				rightNoteInstances_.emplace_back(
 					//レーン
 					LanePosition::Right,
 					totalTime + i * noteInterval,
@@ -640,21 +646,31 @@ void GameScene::Update(Elysia::GameManager* gameManager) {
 		noteMoveTime_ = musicTime_- START_OFFSET_TIME_;
 
 
-
-
+		int closestNoteIndex = -1;
+		//float_t minAbsJudgementTime = 9999.0f;
 		int hitLaneType = -1; // どのレーンで入力があったかを記録（G:0, H:1, J:2 など）
+		float_t touchTime = 0.0f;
+
+		//タッチした
+		InputCondition inputCondition = {};
 
 		// 2. キー入力のチェックと、入力があったレーンの決定
 		if (input_->IsTriggerKey(DIK_G) == true) {
 			touch_.left++;
+			inputCondition.isInputLeft = true;
+			touchTime = musicTime_;
 			hitLaneType = LanePosition::Left; // 例：レーン0
 		}
 		if (input_->IsTriggerKey(DIK_H) == true) {
 			touch_.middle++;
+			inputCondition.isInputMiddle = true;
+			touchTime = musicTime_;
 			hitLaneType = LanePosition::Middle; // 例：レーン1
 		}
 		if (input_->IsTriggerKey(DIK_J) == true) {
 			touch_.right++;
+			inputCondition.isInputRight = true;
+			touchTime = musicTime_;
 			hitLaneType = LanePosition::Right; // 例：レーン2
 		}
 
@@ -665,7 +681,7 @@ void GameScene::Update(Elysia::GameManager* gameManager) {
 
 
 			//判定時間
-			float_t judgementTime = note.judgementArrivalTime - musicTime_;
+			//float absJudgementTime = std::abs(note.judgementArrivalTime - musicTime_);
 			//開始から判定までどのくらいの位置にいるかを計算
 			float_t moveRatio = SingleCalculation::InverseLerp(note.startMoveTime, note.judgementArrivalTime, musicTime_);
 			//座標の計算
@@ -673,40 +689,47 @@ void GameScene::Update(Elysia::GameManager* gameManager) {
 			//設定
 			note.noteSprite->SetPositionY(positionY);
 
+			
 			//入力されたとき
 			if (hitLaneType != -1) {
-				//レーンの位置
-				switch (note.lane) {
-				case LanePosition::Left:
+				closestNoteIndex = i; // ★ 最も近いノーツのインデックスを記録
 
-
-					break;
-
-				case LanePosition::Middle:
-
-
-					break;
-
-				case LanePosition::Right:
-
-
-					break;
-				}
-
-				if (judgementTime < PERFECT_TAP_) {
-					result_.perfect++;
-					
-				}
-
-
-				note.isJudged = true;
 			}
 
+			if (closestNoteIndex != -1) {
+				float_t judgementTime = touchTime - note.judgementArrivalTime;
+				// 例: closestNote.result = Judgement::PERFECT; result_.perfect++;
+				if (judgementTime >= 0.0f &&
+					judgementTime < PERFECT_TAP_) {
+					result_.perfect++;
+					note.judgement = NoteJudgementSelection::Perfect;
+				}
+				if (judgementTime >= PERFECT_TAP_&&
+					judgementTime < GREAT_TAP_) {
+					result_.great++;
+					note.judgement = NoteJudgementSelection::Great;
 
+				}
+				else if (judgementTime >= GREAT_TAP_&&
+					judgementTime < GOOD_TAP_) {
+					result_.good;
+					note.judgement = NoteJudgementSelection::Good;
+				}
+				else if (judgementTime >= GOOD_TAP_ &&
+					judgementTime < MISS_TAP_) {
+					result_.miss++;
+					note.judgement = NoteJudgementSelection::Miss;
+				}
+
+
+				
+				// 判定が確定したらフラグを立てる
+				note.isJudged = true;
+
+			}
 
 #ifdef _DEBUG
 			ImGui::Begin("ノーツ");
-			ImGui::InputFloat("判定時間", &judgementTime);
 			ImGui::InputFloat("割合", &moveRatio);
 			ImGui::InputFloat("Y座標", &positionY);
 			ImGui::End();
@@ -739,6 +762,10 @@ void GameScene::Update(Elysia::GameManager* gameManager) {
 #endif // _DEBUG
 }
 
+void GameScene::FlowProcess(std::vector<NoteInstance>& noteInstance)
+{
+}
+
 void GameScene::DisplayImGui() {
 	ImGui::Begin("ゲームシーン");
 	if(ImGui::TreeNode("判定") == true) {
@@ -749,12 +776,6 @@ void GameScene::DisplayImGui() {
 		ImGui::TreePop();
 	}
 
-	if (ImGui::TreeNode("入力") == true) {
-		ImGui::InputInt("左", &touch_.left);
-		ImGui::InputInt("中", &touch_.middle);
-		ImGui::InputInt("右", &touch_.right);
-		ImGui::TreePop();
-	}
 
 	ImGui::InputFloat("待機", &waitingTime_);
 	ImGui::InputFloat("開始", &startTime_);
@@ -783,8 +804,8 @@ void GameScene::DrawSprite() {
 	//判定線
 	judgement_->Draw();
 	//ノーツ
-	for (const auto& note : noteInstances_) {
-		//if (!note.isDisplay) continue;
+	for (const auto& note : leftNoteInstances_) {
+
 
 		if (note.noteSprite != nullptr) {
 			
@@ -792,6 +813,28 @@ void GameScene::DrawSprite() {
 		}
 		
 	}
+	for (const auto& note : middleNoteInstances_) {
+
+
+		if (note.noteSprite != nullptr) {
+
+			note.noteSprite->Draw();
+		}
+
+	}
+	for (const auto& note : rightNoteInstances_) {
+
+
+		if (note.noteSprite != nullptr) {
+
+			note.noteSprite->Draw();
+		}
+
+	}
+	;
+	;
+	;
+
 
 	//part_->Draw();
 

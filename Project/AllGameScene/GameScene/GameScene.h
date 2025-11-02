@@ -78,6 +78,12 @@ struct NotePosition {
 	int32_t right;
 };
 
+struct InputCondition {
+	bool isInputLeft;
+	bool isInputMiddle;
+	bool isInputRight;
+};
+
 enum LanePosition {
 	Left,
 	Middle,
@@ -96,6 +102,14 @@ struct NoteBar {
 	uint32_t bpm;
 };
 
+enum NoteJudgementSelection {
+	Perfect,
+	Great,
+	Good,
+	Miss,
+	None,
+};
+
 struct NoteInstance {
 	// 0=左, 1=中, 2=右
 	int32_t lane=0;   
@@ -110,19 +124,15 @@ struct NoteInstance {
 	Vector2 position = {};
 	//ノーツのスプライト
 	std::unique_ptr<Elysia::Sprite> noteSprite=nullptr;
-
+	//判定されたか
 	bool isJudged = false;
-
+	//判定
+	uint32_t judgement= NoteJudgementSelection::None;
 	//
 	bool isPlaySE = false;
 };
 
-enum NoteJudgementSelection {
-	Perfect,
-	Great,
-	Good,
-	Miss,
-};
+
 
 struct NoteJudgementResult {
 	int32_t perfect;
@@ -180,6 +190,12 @@ public:
 	~GameScene() = default;
 
 private:
+	/// <summary>
+	/// ノーツの流れる処理
+	/// </summary>
+	/// <param name="noteInstance"></param>
+	void FlowProcess(std::vector<NoteInstance>& noteInstance);
+
 	/// <summary>
 	/// ImGuiの表示
 	/// </summary>
@@ -263,8 +279,6 @@ private:
 	uint32_t attackPartTextureHandle_ = 0u;
 	uint32_t deffencePartTextureHandle_ = 0u;
 
-	//譜面データ
-	std::vector<NoteBar> notesData_;
 	//待ち時間
 	float_t waitingTime_ = 0.0f;
 	//開始までの時間
@@ -274,7 +288,14 @@ private:
 
 	float_t totalTime_ = 0.0f;
 	float_t noteMoveTime_ = 0.0f;
-	std::vector<NoteInstance> noteInstances_;
+	//std::vector<NoteInstance> noteInstances_;
+
+	std::vector<NoteInstance> leftNoteInstances_;
+	std::vector<NoteInstance> middleNoteInstances_;
+	std::vector<NoteInstance> rightNoteInstances_;
+
+
+
 	uint32_t noteRadius_ = 0u;
 
 	//レーンの座標
