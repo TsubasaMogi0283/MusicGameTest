@@ -191,10 +191,21 @@ public:
 
 private:
 	/// <summary>
+	/// ノーツの流れる処理(左)
+	/// </summary>
+	void FlowProcessLeft();
+
+	/// <summary>
 	/// ノーツの流れる処理
 	/// </summary>
-	/// <param name="noteInstance"></param>
-	void FlowProcess(std::vector<NoteInstance>& noteInstance);
+	void FlowProcessMiddle();
+
+	/// <summary>
+	/// ノーツの流れる処理
+	/// </summary>
+	void FlowProcessRight();
+
+
 
 	/// <summary>
 	/// ImGuiの表示
@@ -237,13 +248,13 @@ private:
 
 	//判定
 	//パーフェクト
-	const float_t PERFECT_TAP_ = 0.4f;
+	const float_t PERFECT_TAP_ = 0.2f;
 	//グレート
-	const float_t GREAT_TAP_ = 0.7f;
+	const float_t GREAT_TAP_ = 0.3f;
 	//グッド
-	const float_t GOOD_TAP_ = 0.8f;
+	const float_t GOOD_TAP_ = 0.4f;
 	//ミス
-	const float_t MISS_TAP_ = 1.0f;
+	const float_t MISS_TAP_ = 0.6f;
 
 private:
 	
@@ -294,7 +305,18 @@ private:
 	std::vector<NoteInstance> middleNoteInstances_;
 	std::vector<NoteInstance> rightNoteInstances_;
 
+	int32_t leftClosestNoteIndex_ = -1;
+	int32_t	middleClosestNoteIndex_ = -1;
+	int32_t rightClosestNoteIndex_ = -1;
 
+
+	float_t leftTouchTime_ = 0.0f;
+	float_t middleTouchTime_ = 0.0f;
+	float_t rightTouchTime_ = 0.0f;
+
+
+
+	int hitLaneType_ = 0;
 
 	uint32_t noteRadius_ = 0u;
 
