@@ -242,8 +242,8 @@ private:
 	//判定の座標
 	const float_t JUDGEMENT_POSITION_Y_ = 650.0f;
 
-	//動き出す時間のオフセット
-	const float_t START_OFFSET_TIME_ = 1.0f;
+	//オフセット
+	const float_t START_OFFSET_TIME_ = 1.00f;
 
 
 	//判定
@@ -305,9 +305,9 @@ private:
 	std::vector<NoteInstance> middleNoteInstances_;
 	std::vector<NoteInstance> rightNoteInstances_;
 
-	int32_t leftClosestNoteIndex_ = -1;
-	int32_t	middleClosestNoteIndex_ = -1;
-	int32_t rightClosestNoteIndex_ = -1;
+	
+	
+	
 
 
 	float_t leftTouchTime_ = 0.0f;
@@ -316,7 +316,10 @@ private:
 
 
 
-	int hitLaneType_ = 0;
+	bool isHitLeft_ = false;
+	bool isHitMiddle_ = false;
+	bool isHitRight_ = false;
+
 
 	uint32_t noteRadius_ = 0u;
 
@@ -324,15 +327,18 @@ private:
 	std::array<float_t, 3u>laneX_ = {100,200,300};
 	//曲のハンドル
 	uint32_t musicHandle_ = 0u;
-	//楽曲の時間
 	float_t musicTime_ = 0.0f;
-
 	uint32_t arraiveSEHandle_ = 0u;
 
 
 private:
 	//判定
-	NoteJudgementResult result_ = {};
+	NoteJudgementResult leftResult_ = {};
+	NoteJudgementResult middleResult_ = {};
+	NoteJudgementResult rightResult_ = {};
+
+
+
 	//タッチ
 	NotePosition touch_ = {};
 

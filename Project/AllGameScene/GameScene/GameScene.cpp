@@ -252,298 +252,6 @@ void GameScene::Initialize() {
 
 		},
 
-		//1
-		{
-			// 1
-			{
-				{ 1, 0, 1 },
-				{ 0, 0, 0 },
-				{ 0, 0, 1 },
-				{ 1, 0, 0 },
-				{ 0, 0, 1 },
-				{ 0, 0, 0 },
-				{ 0, 1, 0 },
-				{ 0, 0, 0 },
-				{ 1, 0, 0 },
-				{ 0, 0, 0 },
-				{ 1, 0, 0 },
-				{ 0, 1, 0 },
-				{ 1, 0, 1 },
-				{ 0, 0, 0 },
-				{ 0, 0, 1 },
-				{ 0, 0, 0 },
-			},
-
-			// 2. bpm の値
-			170,
-
-		},
-
-
-		//1
-		{
-			// 1
-			{
-				{ 0, 1, 0 },
-				{ 1, 0, 1 },
-				{ 0, 1, 0 },
-				{ 0, 0, 0 },
-				{ 1, 0, 1 },
-				{ 0, 0, 0 },
-				{ 0, 1, 0 },
-				{ 1, 0, 1 },
-				{ 0, 1, 0 },
-				{ 0, 0, 0 },
-				{ 1, 0, 1 },
-				{ 0, 0, 0 },
-				{ 1, 0, 0 },
-				{ 0, 1, 0 },
-				{ 0, 0, 1 },
-				{ 0, 1, 0 },
-			},
-
-			// 2. bpm の値
-			170,
-
-		},
-
-		//1
-		{
-			// 1
-			{
-				{ 1, 0, 1 },
-				{ 0, 0, 0 },
-				{ 0, 0, 1 },
-				{ 1, 0, 0 },
-				{ 0, 0, 1 },
-				{ 0, 0, 0 },
-				{ 0, 1, 0 },
-				{ 0, 0, 0 },
-				{ 1, 0, 0 },
-				{ 0, 0, 0 },
-				{ 1, 0, 0 },
-				{ 0, 1, 0 },
-				{ 1, 0, 1 },
-				{ 0, 0, 0 },
-				{ 0, 0, 1 },
-				{ 0, 0, 0 },
-			},
-
-			// 2. bpm の値
-			170,
-
-		},
-
-
-		//1
-		{
-			// 1
-			{
-				{ 0, 1, 0 },
-				{ 1, 0, 1 },
-				{ 0, 1, 0 },
-				{ 0, 0, 0 },
-				{ 1, 0, 1 },
-				{ 0, 0, 0 },
-				{ 0, 1, 0 },
-				{ 1, 0, 1 },
-				{ 0, 1, 0 },
-				{ 0, 0, 0 },
-				{ 1, 0, 1 },
-				{ 0, 0, 0 },
-				{ 1, 0, 0 },
-				{ 0, 1, 0 },
-				{ 0, 0, 1 },
-				{ 0, 1, 0 },
-			},
-
-			// 2. bpm の値
-			170,
-
-		},
-		//1
-		{
-			// 1
-			{
-				{ 1, 0, 1 },
-				{ 0, 0, 0 },
-				{ 0, 0, 1 },
-				{ 1, 0, 0 },
-				{ 0, 0, 1 },
-				{ 0, 0, 0 },
-				{ 0, 1, 0 },
-				{ 0, 0, 0 },
-				{ 1, 0, 0 },
-				{ 0, 0, 0 },
-				{ 1, 0, 0 },
-				{ 0, 1, 0 },
-				{ 1, 0, 1 },
-				{ 0, 0, 0 },
-				{ 0, 0, 1 },
-				{ 0, 0, 0 },
-			},
-
-			// 2. bpm の値
-			170,
-
-		},
-
-
-		//1
-		{
-			// 1
-			{
-				{ 0, 1, 0 },
-				{ 1, 0, 1 },
-				{ 0, 1, 0 },
-				{ 0, 0, 0 },
-				{ 1, 0, 1 },
-				{ 0, 0, 0 },
-				{ 0, 1, 0 },
-				{ 1, 0, 1 },
-				{ 0, 1, 0 },
-				{ 0, 0, 0 },
-				{ 1, 0, 1 },
-				{ 0, 0, 0 },
-				{ 1, 0, 0 },
-				{ 0, 1, 0 },
-				{ 0, 0, 1 },
-				{ 0, 1, 0 },
-			},
-
-			// 2. bpm の値
-			170,
-
-		},
-
-		//1
-		{
-			// 1
-			{
-				{ 1, 0, 1 },
-				{ 0, 0, 0 },
-				{ 0, 0, 1 },
-				{ 1, 0, 0 },
-				{ 0, 0, 1 },
-				{ 0, 0, 0 },
-				{ 0, 1, 0 },
-				{ 0, 0, 0 },
-				{ 1, 0,  },
-				{ 0, 0, 0 },
-				{ 1, 0, 0 },
-				{ 0, 1, 0 },
-				{ 1, 0, 1 },
-				{ 0, 0, 0 },
-				{ 0, 0, 1 },
-				{ 0, 0, 0 },
-			},
-
-			// 2. bpm の値
-			170,
-
-		},
-
-
-		//1
-		{
-			// 1
-			{
-				{ 0, 1, 0 },
-				{ 1, 0, 1 },
-				{ 0, 1, 0 },
-				{ 0, 0, 0 },
-				{ 1, 0, 1 },
-				{ 0, 0, 0 },
-				{ 0, 1, 0 },
-				{ 1, 0, 1 },
-				{ 0, 1, 0 },
-				{ 0, 0, 0 },
-				{ 1, 0, 1 },
-				{ 0, 0, 0 },
-				{ 0, 1, 0 },
-				{ 0, 0, 0 },
-				{ 0, 1, 0 },
-				{ 0, 0, 0 },
-			},
-
-			// 2. bpm の値
-			170,
-
-		},
-
-		//1
-		{
-			// 1
-			{
-				{ 1, 0, 0 },
-				{ 0, 0, 0 },
-				{ 0, 0, 0 },
-				{ 0, 1, 0 },
-				{ 0, 1, 0 },
-				{ 0, 0, 0 },
-				{ 0, 0, 1 },
-				{ 0, 0, 0 },
-			},
-
-			// 2. bpm の値
-			170,
-
-		},
-		//1
-		{
-			// 1
-			{
-				{ 1, 0, 1 },
-				{ 0, 0, 0 },
-				{ 0, 0, 1 },
-				{ 0, 1, 0 },
-				{ 1, 0, 0 },
-				{ 0, 0, 0 },
-				{ 1, 0, 0 },
-				{ 0, 1, 0 },
-			},
-
-			// 2. bpm の値
-			170,
-
-		},
-		//1
-		{
-			// 1
-			{
-				{ 0, 1, 1 },
-				{ 0, 0, 0 },
-				{ 0, 0, 0 },
-				{ 0, 0, 1 },
-				{ 0, 0, 1 },
-				{ 0, 0, 0 },
-				{ 1, 0, 0 },
-				{ 0, 0, 0 },
-			},
-
-			// 2. bpm の値
-			170,
-
-		},
-		//1
-		{
-			// 1
-			{
-				{ 0, 1, 0 },
-				{ 0, 0, 1 },
-				{ 0, 0, 0 },
-				{ 0, 0, 1 },
-				{ 0, 0, 0 },
-				{ 0, 0, 0 },
-				{ 0, 0, 0 },
-				{ 0, 0, 0 },
-			},
-
-			// 2. bpm の値
-			170,
-
-		},
-
 	};
 
 	uint32_t noteTextureHandle = textureManager_->Load("Resources/Sprite/Note.png");
@@ -622,6 +330,7 @@ void GameScene::Initialize() {
 
 void GameScene::FlowProcessLeft() {
 
+	int32_t leftClosestNoteIndex = -1;
 	for (int32_t i = 0; i < leftNoteInstances_.size(); ++i) {
 		auto& note = leftNoteInstances_[i];
 
@@ -650,8 +359,8 @@ void GameScene::FlowProcessLeft() {
 #endif // _DEBUG
 
 		//入力されたとき
-		if (hitLaneType_ == LanePosition::Left) {
-			leftClosestNoteIndex_ = i; // ★ 最も近いノーツのインデックスを記録
+		if (isHitLeft_) {
+			leftClosestNoteIndex = i; // ★ 最も近いノーツのインデックスを記録
 			break;
 		}
 
@@ -659,7 +368,7 @@ void GameScene::FlowProcessLeft() {
 		float_t overlookValue = musicTime_ - note.judgementArrivalTime;
 		//見過ごし(Miss)用
 		if (overlookValue > MISS_TAP_) {
-			result_.miss++;
+			leftResult_.miss++;
 			note.judgement = NoteJudgementSelection::Miss;
 			// 判定が確定したらフラグを立てる
 			note.isJudged = true;
@@ -668,15 +377,15 @@ void GameScene::FlowProcessLeft() {
 
 	}
 
-	if (leftClosestNoteIndex_ != -1) {
-		auto& closestNote = leftNoteInstances_[leftClosestNoteIndex_];
+	if (leftClosestNoteIndex != -1) {
+		auto& closestNote = leftNoteInstances_[leftClosestNoteIndex];
 		//絶対値版
 		float_t absJudgementTime = std::abs(leftTouchTime_ - closestNote.judgementArrivalTime);
 		
 		//Perfect用
 		if (absJudgementTime >= 0.0f &&
 			absJudgementTime < PERFECT_TAP_) {
-			result_.perfect++;
+			leftResult_.perfect++;
 			closestNote.judgement = NoteJudgementSelection::Perfect;
 			// 判定が確定したらフラグを立てる
 			closestNote.isJudged = true;
@@ -684,7 +393,7 @@ void GameScene::FlowProcessLeft() {
 		//Great用
 		if (absJudgementTime >= PERFECT_TAP_ &&
 			absJudgementTime < GREAT_TAP_) {
-			result_.great++;
+			leftResult_.great++;
 			closestNote.judgement = NoteJudgementSelection::Great;
 			// 判定が確定したらフラグを立てる
 			closestNote.isJudged = true;
@@ -692,7 +401,7 @@ void GameScene::FlowProcessLeft() {
 		//Good用
 		else if (absJudgementTime >= GREAT_TAP_ &&
 			absJudgementTime < GOOD_TAP_) {
-			result_.good;
+			leftResult_.good;
 			closestNote.judgement = NoteJudgementSelection::Good;
 			// 判定が確定したらフラグを立てる
 			closestNote.isJudged = true;
@@ -700,27 +409,183 @@ void GameScene::FlowProcessLeft() {
 		//Miss用
 		else if (absJudgementTime >= GOOD_TAP_ &&
 			absJudgementTime < MISS_TAP_) {
-			result_.miss++;
+			leftResult_.miss++;
 			closestNote.judgement = NoteJudgementSelection::Miss;
 			// 判定が確定したらフラグを立てる
 			closestNote.isJudged = true;
 		}
-		
-
-
-
-		
-
 	}
 
 }
 
 void GameScene::FlowProcessMiddle() {
 
+	int32_t	middleClosestNoteIndex = -1;
+
+	for (int32_t i = 0; i < middleNoteInstances_.size(); ++i) {
+		auto& note = middleNoteInstances_[i];
+
+		if (note.isJudged) {
+			continue;
+		}
+
+		//動きの割合
+		float_t moveRatio = SingleCalculation::InverseLerp(note.startMoveTime, note.judgementArrivalTime, musicTime_);
+		//座標の計算
+		float_t positionY = SingleCalculation::Lerp(WAITING_POSITION_Y_, JUDGEMENT_POSITION_Y_, moveRatio);
+		//設定
+		note.noteSprite->SetPositionY(positionY);
+
+#ifdef _DEBUG
+		ImGui::Begin("中ノーツ");
+		ImGui::InputFloat("割合", &moveRatio);
+		ImGui::InputFloat("Y座標", &positionY);
+		ImGui::End();
+
+
+#endif // _DEBUG
+
+		//入力されたとき
+		if (isHitMiddle_) {
+			middleClosestNoteIndex = i; // ★ 最も近いノーツのインデックスを記録
+			break;
+		}
+
+		//見過ごし用
+		float_t overlookValue = musicTime_ - note.judgementArrivalTime;
+		//見過ごし(Miss)用
+		if (overlookValue > MISS_TAP_) {
+			middleResult_.miss++;
+			note.judgement = NoteJudgementSelection::Miss;
+			// 判定が確定したらフラグを立てる
+			note.isJudged = true;
+		}
+
+
+	}
+
+	if (middleClosestNoteIndex != -1) {
+		auto& closestNote = middleNoteInstances_[middleClosestNoteIndex];
+		//絶対値版
+		float_t absJudgementTime = std::abs(middleTouchTime_ - closestNote.judgementArrivalTime);
+
+		//Perfect用
+		if (absJudgementTime >= 0.0f &&
+			absJudgementTime < PERFECT_TAP_) {
+			middleResult_.perfect++;
+			closestNote.judgement = NoteJudgementSelection::Perfect;
+			// 判定が確定したらフラグを立てる
+			closestNote.isJudged = true;
+		}
+		//Great用
+		if (absJudgementTime >= PERFECT_TAP_ &&
+			absJudgementTime < GREAT_TAP_) {
+			middleResult_.great++;
+			closestNote.judgement = NoteJudgementSelection::Great;
+			// 判定が確定したらフラグを立てる
+			closestNote.isJudged = true;
+		}
+		//Good用
+		else if (absJudgementTime >= GREAT_TAP_ &&
+			absJudgementTime < GOOD_TAP_) {
+			middleResult_.good;
+			closestNote.judgement = NoteJudgementSelection::Good;
+			// 判定が確定したらフラグを立てる
+			closestNote.isJudged = true;
+		}
+		//Miss用
+		else if (absJudgementTime >= GOOD_TAP_ &&
+			absJudgementTime < MISS_TAP_) {
+			middleResult_.miss++;
+			closestNote.judgement = NoteJudgementSelection::Miss;
+			// 判定が確定したらフラグを立てる
+			closestNote.isJudged = true;
+		}
+	}
 }
 
 void GameScene::FlowProcessRight() {
 
+	int32_t rightClosestNoteIndex = -1;
+	for (int32_t i = 0; i < rightNoteInstances_.size(); ++i) {
+		auto& note = rightNoteInstances_[i];
+
+		if (note.isJudged) {
+			continue;
+		}
+
+		//動きの割合
+		float_t moveRatio = SingleCalculation::InverseLerp(note.startMoveTime, note.judgementArrivalTime, musicTime_);
+		//座標の計算
+		float_t positionY = SingleCalculation::Lerp(WAITING_POSITION_Y_, JUDGEMENT_POSITION_Y_, moveRatio);
+		//設定
+		note.noteSprite->SetPositionY(positionY);
+
+#ifdef _DEBUG
+		ImGui::Begin("右ノーツ");
+		ImGui::InputFloat("割合", &moveRatio);
+		ImGui::InputFloat("Y座標", &positionY);
+		ImGui::End();
+
+#endif // _DEBUG
+
+		//入力されたとき
+		if (isHitRight_) {
+			rightClosestNoteIndex = i; // ★ 最も近いノーツのインデックスを記録
+			break;
+		}
+
+		//見過ごし用
+		float_t overlookValue = musicTime_ - note.judgementArrivalTime;
+		//見過ごし(Miss)用
+		if (overlookValue > MISS_TAP_) {
+			rightResult_.miss++;
+			note.judgement = NoteJudgementSelection::Miss;
+			// 判定が確定したらフラグを立てる
+			note.isJudged = true;
+		}
+
+
+	}
+
+	if (rightClosestNoteIndex != -1) {
+		auto& closestNote = rightNoteInstances_[rightClosestNoteIndex];
+		//絶対値版
+		float_t absJudgementTime = std::abs(rightTouchTime_ - closestNote.judgementArrivalTime);
+
+		//Perfect用
+		if (absJudgementTime >= 0.0f &&
+			absJudgementTime < PERFECT_TAP_) {
+			rightResult_.perfect++;
+			closestNote.judgement = NoteJudgementSelection::Perfect;
+			// 判定が確定したらフラグを立てる
+			closestNote.isJudged = true;
+		}
+		//Great用
+		if (absJudgementTime >= PERFECT_TAP_ &&
+			absJudgementTime < GREAT_TAP_) {
+			rightResult_.great++;
+			closestNote.judgement = NoteJudgementSelection::Great;
+			// 判定が確定したらフラグを立てる
+			closestNote.isJudged = true;
+		}
+		//Good用
+		else if (absJudgementTime >= GREAT_TAP_ &&
+			absJudgementTime < GOOD_TAP_) {
+			rightResult_.good;
+			closestNote.judgement = NoteJudgementSelection::Good;
+			// 判定が確定したらフラグを立てる
+			closestNote.isJudged = true;
+		}
+		//Miss用
+		else if (absJudgementTime >= GOOD_TAP_ &&
+			absJudgementTime < MISS_TAP_) {
+			rightResult_.miss++;
+			closestNote.judgement = NoteJudgementSelection::Miss;
+			// 判定が確定したらフラグを立てる
+			closestNote.isJudged = true;
+		}
+	}
 }
 
 
@@ -737,7 +602,6 @@ void GameScene::Update(Elysia::GameManager* gameManager) {
 			if (startTime_ > 3.0f) {
 				isStart_ = true;
 				audio_->Play(musicHandle_, false);
-				musicTime_ = 0.0f;
 			}
 		}
 	}
@@ -746,19 +610,20 @@ void GameScene::Update(Elysia::GameManager* gameManager) {
 		
 		// 再生時間を取得
 		musicTime_ = audio_->GetPlayCurrentTime(musicHandle_);
-		noteMoveTime_ = musicTime_- START_OFFSET_TIME_;
+		//オフセットも踏まえたうえでの値
+		//こっちを使う
+		noteMoveTime_ = musicTime_ +  START_OFFSET_TIME_;
 
 
-		hitLaneType_ = -1; // どのレーンで入力があったかを記録（G:0, H:1, J:2 など）
+		//入力状態を記録
+		isHitLeft_ = false;
+		isHitMiddle_ = false;
+		isHitRight_ = false;
 
 		leftTouchTime_ = 0.0f;
 		middleTouchTime_ = 0.0f;
 		rightTouchTime_ = 0.0f;
 
-
-		leftClosestNoteIndex_ = -1;
-		middleClosestNoteIndex_ = -1;
-		rightClosestNoteIndex_ = -1;
 		//タッチした
 		InputCondition inputCondition = {};
 
@@ -767,19 +632,19 @@ void GameScene::Update(Elysia::GameManager* gameManager) {
 			touch_.left++;
 			inputCondition.isInputLeft = true;
 			leftTouchTime_ = musicTime_;
-			hitLaneType_ = LanePosition::Left; // 例：レーン0
+			isHitLeft_ = true;
 		}
 		if (input_->IsTriggerKey(DIK_H) == true) {
 			touch_.middle++;
 			inputCondition.isInputMiddle = true;
 			middleTouchTime_ = musicTime_;
-			hitLaneType_ = LanePosition::Middle; // 例：レーン1
+			isHitMiddle_ = true;
 		}
 		if (input_->IsTriggerKey(DIK_J) == true) {
 			touch_.right++;
 			inputCondition.isInputRight = true;
 			rightTouchTime_ = musicTime_;
-			hitLaneType_ = LanePosition::Right; // 例：レーン2
+			isHitRight_ = true;
 		}
 		//左
 		FlowProcessLeft();
@@ -813,18 +678,40 @@ void GameScene::Update(Elysia::GameManager* gameManager) {
 
 void GameScene::DisplayImGui() {
 	ImGui::Begin("ゲームシーン");
-	if(ImGui::TreeNode("判定") == true) {
-		ImGui::InputInt("Perfect", &result_.perfect);
-		ImGui::InputInt("Great", &result_.great);
-		ImGui::InputInt("Good", &result_.good);
-		ImGui::InputInt("Miss", &result_.miss);
-		ImGui::TreePop();
-	}
+
+	ImGui::InputInt("左タッチ", &touch_.left);
+	ImGui::InputInt("中タッチ", &touch_.middle);
+	ImGui::InputInt("右タッチ", &touch_.right);
+	ImGui::Text("判定左");
+	ImGui::InputInt("Perfect", &leftResult_.perfect);
+	ImGui::InputInt("Great", &leftResult_.great);
+	ImGui::InputInt("Good", &leftResult_.good);
+	ImGui::InputInt("Miss", &leftResult_.miss);
+	ImGui::Text("判定中");
+	ImGui::InputInt("Perfect", &middleResult_.perfect);
+	ImGui::InputInt("Great", &middleResult_.great);
+	ImGui::InputInt("Good", &middleResult_.good);
+	ImGui::InputInt("Miss", &middleResult_.miss);
+	ImGui::Text("判定右");
+	ImGui::InputInt("Perfect", &rightResult_.perfect);
+	ImGui::InputInt("Great", &rightResult_.great);
+	ImGui::InputInt("Good", &rightResult_.good);
+	ImGui::InputInt("Miss", &rightResult_.miss);
+	ImGui::Text("総合判定");
+	int32_t perfect = leftResult_.perfect + middleResult_.perfect + rightResult_.perfect;
+	int32_t great = leftResult_.great + middleResult_.great + rightResult_.great;
+	int32_t good = leftResult_.good + middleResult_.good + rightResult_.good;
+	int32_t miss = leftResult_.miss + middleResult_.miss + rightResult_.miss;
+
+	ImGui::InputInt("Perfect", &perfect);
+	ImGui::InputInt("Great", &great);
+	ImGui::InputInt("Good", &good);
+	ImGui::InputInt("Miss", &miss);
 
 
 	ImGui::InputFloat("待機", &waitingTime_);
 	ImGui::InputFloat("開始", &startTime_);
-	ImGui::InputFloat("再生時間", &musicTime_);
+	ImGui::InputFloat("再生時間", &noteMoveTime_);
 	ImGui::End();
 }
 
@@ -861,7 +748,7 @@ void GameScene::DrawSprite() {
 	for (const auto& note : middleNoteInstances_) {
 
 
-		if (note.noteSprite != nullptr ) {
+		if (note.noteSprite != nullptr && note.isJudged == false) {
 
 			note.noteSprite->Draw();
 		}
@@ -870,16 +757,12 @@ void GameScene::DrawSprite() {
 	for (const auto& note : rightNoteInstances_) {
 
 
-		if (note.noteSprite != nullptr ) {
+		if (note.noteSprite != nullptr && note.isJudged == false) {
 
 			note.noteSprite->Draw();
 		}
 
 	}
-	;
-	;
-	;
-
 
 	//part_->Draw();
 
