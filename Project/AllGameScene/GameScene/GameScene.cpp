@@ -655,17 +655,24 @@ void GameScene::FlowProcessLeft() {
 			break;
 		}
 
-		
+		//見過ごし用
+		float_t overlookValue = musicTime_ - note.judgementArrivalTime;
+		//見過ごし(Miss)用
+		if (overlookValue > MISS_TAP_) {
+			result_.miss++;
+			note.judgement = NoteJudgementSelection::Miss;
+			// 判定が確定したらフラグを立てる
+			note.isJudged = true;
+		}
 
 
 	}
 
 	if (leftClosestNoteIndex_ != -1) {
 		auto& closestNote = leftNoteInstances_[leftClosestNoteIndex_];
-		//判定用の時間
-		float_t judgementTime = leftTouchTime_ - closestNote.judgementArrivalTime;
 		//絶対値版
 		float_t absJudgementTime = std::abs(leftTouchTime_ - closestNote.judgementArrivalTime);
+		
 		//Perfect用
 		if (absJudgementTime >= 0.0f &&
 			absJudgementTime < PERFECT_TAP_) {
@@ -698,13 +705,7 @@ void GameScene::FlowProcessLeft() {
 			// 判定が確定したらフラグを立てる
 			closestNote.isJudged = true;
 		}
-		//見過ごし(Miss)用
-		else if (judgementTime > MISS_TAP_) {
-			result_.miss++;
-			closestNote.judgement = NoteJudgementSelection::Miss;
-			// 判定が確定したらフラグを立てる
-			closestNote.isJudged = true;
-		}
+		
 
 
 
@@ -851,7 +852,7 @@ void GameScene::DrawSprite() {
 	for (const auto& note : leftNoteInstances_) {
 
 
-		if (note.noteSprite != nullptr) {
+		if (note.noteSprite != nullptr&&note.isJudged==false) {
 			
 			note.noteSprite->Draw();
 		}

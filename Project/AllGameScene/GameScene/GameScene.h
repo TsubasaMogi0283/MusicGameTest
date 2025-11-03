@@ -248,13 +248,13 @@ private:
 
 	//判定
 	//パーフェクト
-	const float_t PERFECT_TAP_ = 0.2f;
+	const float_t PERFECT_TAP_ = 0.1f;
 	//グレート
-	const float_t GREAT_TAP_ = 0.3f;
+	const float_t GREAT_TAP_ = 0.25f;
 	//グッド
 	const float_t GOOD_TAP_ = 0.4f;
 	//ミス
-	const float_t MISS_TAP_ = 0.6f;
+	const float_t MISS_TAP_ = 0.5f;
 
 private:
 	
