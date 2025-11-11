@@ -113,7 +113,12 @@ enum NoteJudgementSelection {
 struct NoteInstance {
 	// 0=左, 1=中, 2=右
 	int32_t lane=0;   
-	
+	//何分かの値
+	size_t noteLength = 0u;
+	//ノーツの種類
+	int32_t noteSelection = 0u;
+
+
 	//判定線に到着する時間
 	float_t judgementArrivalTime=0.0f;
 	//動き出す時間

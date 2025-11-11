@@ -252,9 +252,49 @@ void GameScene::Initialize() {
 
 		},
 
-	};
 
+		//ドロップ
+		//1
+		{
+			// 1
+			{
+				{ 2, 0, 0 },
+				{ 3, 0, 0 },
+				{ 3, 0, 0 },
+				{ 3, 0, 0 },
+			},
+
+			// 2. bpm の値
+			170,
+
+		},
+
+		//1
+		{
+			// 1
+			{
+				{ 0, 2, 0 },
+				{ 0, 3, 0 },
+				{ 0, 0, 2 },
+				{ 0, 0, 3 },
+			},
+
+			// 2. bpm の値
+			170,
+
+		},
+
+
+
+	};
+	//通常タップノーツ
 	uint32_t noteTextureHandle = textureManager_->Load("Resources/Sprite/Note.png");
+	//ロング開始
+	uint32_t longStartNoteTextureHandle = textureManager_->Load("Resources/Sprite/LongStartNote.png");
+	//ロング
+	uint32_t longNoteTextureHandle = textureManager_->Load("Resources/Sprite/LongNote.png");
+
+	//半径
 	noteRadius_ = static_cast<uint32_t>(textureManager_->GetTextureHeight(noteTextureHandle)/2u);
 
 	//ハイスピはここで決めて時間に反映させたらいけそう
@@ -269,17 +309,22 @@ void GameScene::Initialize() {
 		float_t beatDuration = 60.0f / bar.bpm;
 		//ノーツ間隔（1小節4拍）
 		float_t noteInterval = (beatDuration * 4.0f) / bar.notes.size();
+		//長さ
+		size_t noteLength = bar.notes.size();
 
 		for (size_t i = 0u; i < bar.notes.size(); ++i) {
 			const auto& note = bar.notes[i];
 
+			
+
 			// 3レーン分チェック
+#pragma region 通常タップ
 			if (note.left == 1) {
-
-
 				leftNoteInstances_.emplace_back(
 					//レーン
 					LanePosition::Left,
+					noteLength,
+					note.left,
 					//判定線到着時間
 					totalTime + i * noteInterval,
 					totalTime + i * noteInterval - startTime,
@@ -290,12 +335,11 @@ void GameScene::Initialize() {
 
 			}
 			if (note.middle == 1) {
-
-
-
 				middleNoteInstances_.emplace_back(
 					//レーン
 					LanePosition::Middle,
+					noteLength,
+					note.middle,
 					totalTime + i * noteInterval,
 					totalTime + i * noteInterval - startTime,
 					true,
@@ -304,11 +348,11 @@ void GameScene::Initialize() {
 				);
 			}
 			if (note.right == 1) {
-
-
 				rightNoteInstances_.emplace_back(
 					//レーン
 					LanePosition::Right,
+					noteLength,
+					note.right,
 					totalTime + i * noteInterval,
 					totalTime + i * noteInterval - startTime,
 					true,
@@ -316,6 +360,96 @@ void GameScene::Initialize() {
 					Elysia::Sprite::Create(noteTextureHandle, { 300.0f, WAITING_POSITION_Y_ })
 				);
 			}
+
+#pragma endregion
+
+
+#pragma region ロング
+#pragma region 開始
+
+			if (note.left == 2) {
+				leftNoteInstances_.emplace_back(
+					//レーン
+					LanePosition::Left,
+					noteLength,
+					note.left,
+					totalTime + i * noteInterval,
+					totalTime + i * noteInterval - startTime,
+					true,
+					Vector2{ 100.0f, WAITING_POSITION_Y_ },
+					Elysia::Sprite::Create(longStartNoteTextureHandle, { 100.0f, WAITING_POSITION_Y_ }));
+			}
+			if (note.middle == 2) {
+				middleNoteInstances_.emplace_back(
+					//レーン
+					LanePosition::Middle,
+					noteLength,
+					note.middle,
+					totalTime + i * noteInterval,
+					totalTime + i * noteInterval - startTime,
+					true,
+					Vector2{ 200.0f, WAITING_POSITION_Y_ },
+					Elysia::Sprite::Create(longStartNoteTextureHandle, { 200.0f, WAITING_POSITION_Y_ })
+				);
+			}
+			if (note.right == 2) {
+				rightNoteInstances_.emplace_back(
+					//レーン
+					LanePosition::Right,
+					noteLength,
+					note.right,
+					totalTime + i * noteInterval,
+					totalTime + i * noteInterval - startTime,
+					true,
+					Vector2{ 300.0f, WAITING_POSITION_Y_ },
+					Elysia::Sprite::Create(longStartNoteTextureHandle, { 300.0f, WAITING_POSITION_Y_ })
+				);
+			}
+#pragma endregion
+
+
+#pragma region 開始
+
+			if (note.left == 3) {
+				leftNoteInstances_.emplace_back(
+					//レーン
+					LanePosition::Left,
+					noteLength,
+					note.left,
+					totalTime + i * noteInterval,
+					totalTime + i * noteInterval - startTime,
+					true,
+					Vector2{ 100.0f, WAITING_POSITION_Y_ },
+					Elysia::Sprite::Create(longNoteTextureHandle, { 100.0f, WAITING_POSITION_Y_ }));
+			}
+			if (note.middle == 3) {
+				middleNoteInstances_.emplace_back(
+					//レーン
+					LanePosition::Middle,
+					noteLength,
+					note.middle,
+					totalTime + i * noteInterval,
+					totalTime + i * noteInterval - startTime,
+					true,
+					Vector2{ 200.0f, WAITING_POSITION_Y_ },
+					Elysia::Sprite::Create(longNoteTextureHandle, { 200.0f, WAITING_POSITION_Y_ })
+				);
+			}
+			if (note.right == 3) {
+				rightNoteInstances_.emplace_back(
+					//レーン
+					LanePosition::Right,
+					noteLength,
+					note.right,
+					totalTime + i * noteInterval,
+					totalTime + i * noteInterval - startTime,
+					true,
+					Vector2{ 300.0f, WAITING_POSITION_Y_ },
+					Elysia::Sprite::Create(longNoteTextureHandle, { 300.0f, WAITING_POSITION_Y_ })
+				);
+			}
+#pragma endregion
+#pragma endregion
 		}
 		totalTime += 4.0f * beatDuration; // 小節分進める
 	}
@@ -344,6 +478,11 @@ void GameScene::FlowProcessLeft() {
 		float_t positionY = SingleCalculation::Lerp(WAITING_POSITION_Y_, JUDGEMENT_POSITION_Y_, moveRatio);
 		//設定
 		note.noteSprite->SetPositionY(positionY);
+
+		//ロングノーツの場合長さを調整する必要がある
+		if (note.noteSelection == 3) {
+			note.noteSprite->SetScale({ .x = 1.0f,.y = static_cast<float_t>(note.noteLength)/2.0f});
+		}
 
 #ifdef _DEBUG
 		ImGui::Begin("左ノーツ");
@@ -382,37 +521,41 @@ void GameScene::FlowProcessLeft() {
 		//絶対値版
 		float_t absJudgementTime = std::abs(leftTouchTime_ - closestNote.judgementArrivalTime);
 		
-		//Perfect用
-		if (absJudgementTime >= 0.0f &&
-			absJudgementTime < PERFECT_TAP_) {
-			leftResult_.perfect++;
-			closestNote.judgement = NoteJudgementSelection::Perfect;
-			// 判定が確定したらフラグを立てる
-			closestNote.isJudged = true;
-		}
-		//Great用
-		if (absJudgementTime >= PERFECT_TAP_ &&
-			absJudgementTime < GREAT_TAP_) {
-			leftResult_.great++;
-			closestNote.judgement = NoteJudgementSelection::Great;
-			// 判定が確定したらフラグを立てる
-			closestNote.isJudged = true;
-		}
-		//Good用
-		else if (absJudgementTime >= GREAT_TAP_ &&
-			absJudgementTime < GOOD_TAP_) {
-			leftResult_.good;
-			closestNote.judgement = NoteJudgementSelection::Good;
-			// 判定が確定したらフラグを立てる
-			closestNote.isJudged = true;
-		}
-		//Miss用
-		else if (absJudgementTime >= GOOD_TAP_ &&
-			absJudgementTime < MISS_TAP_) {
-			leftResult_.miss++;
-			closestNote.judgement = NoteJudgementSelection::Miss;
-			// 判定が確定したらフラグを立てる
-			closestNote.isJudged = true;
+		//通常タップ専用
+		if (closestNote.noteSelection == 1 &&
+			closestNote.noteSelection == 2) {
+			//Perfect用
+			if (absJudgementTime >= 0.0f &&
+				absJudgementTime < PERFECT_TAP_) {
+				leftResult_.perfect++;
+				closestNote.judgement = NoteJudgementSelection::Perfect;
+				// 判定が確定したらフラグを立てる
+				closestNote.isJudged = true;
+			}
+			//Great用
+			if (absJudgementTime >= PERFECT_TAP_ &&
+				absJudgementTime < GREAT_TAP_) {
+				leftResult_.great++;
+				closestNote.judgement = NoteJudgementSelection::Great;
+				// 判定が確定したらフラグを立てる
+				closestNote.isJudged = true;
+			}
+			//Good用
+			else if (absJudgementTime >= GREAT_TAP_ &&
+				absJudgementTime < GOOD_TAP_) {
+				leftResult_.good;
+				closestNote.judgement = NoteJudgementSelection::Good;
+				// 判定が確定したらフラグを立てる
+				closestNote.isJudged = true;
+			}
+			//Miss用
+			else if (absJudgementTime >= GOOD_TAP_ &&
+				absJudgementTime < MISS_TAP_) {
+				leftResult_.miss++;
+				closestNote.judgement = NoteJudgementSelection::Miss;
+				// 判定が確定したらフラグを立てる
+				closestNote.isJudged = true;
+			}
 		}
 	}
 
@@ -435,7 +578,10 @@ void GameScene::FlowProcessMiddle() {
 		float_t positionY = SingleCalculation::Lerp(WAITING_POSITION_Y_, JUDGEMENT_POSITION_Y_, moveRatio);
 		//設定
 		note.noteSprite->SetPositionY(positionY);
-
+		//ロングノーツの場合長さを調整する必要がある
+		if (note.noteSelection == 2) {
+			note.noteSprite->SetScale({ .x = 1.0f,.y = 1.0f});
+		}
 #ifdef _DEBUG
 		ImGui::Begin("中ノーツ");
 		ImGui::InputFloat("割合", &moveRatio);
@@ -469,38 +615,44 @@ void GameScene::FlowProcessMiddle() {
 		//絶対値版
 		float_t absJudgementTime = std::abs(middleTouchTime_ - closestNote.judgementArrivalTime);
 
-		//Perfect用
-		if (absJudgementTime >= 0.0f &&
-			absJudgementTime < PERFECT_TAP_) {
-			middleResult_.perfect++;
-			closestNote.judgement = NoteJudgementSelection::Perfect;
-			// 判定が確定したらフラグを立てる
-			closestNote.isJudged = true;
+		//通常タップ専用
+		if (closestNote.noteSelection == 1 &&
+			closestNote.noteSelection == 2) {
+			//Perfect用
+			if (absJudgementTime >= 0.0f &&
+				absJudgementTime < PERFECT_TAP_) {
+				middleResult_.perfect++;
+				closestNote.judgement = NoteJudgementSelection::Perfect;
+				// 判定が確定したらフラグを立てる
+				closestNote.isJudged = true;
+			}
+			//Great用
+			if (absJudgementTime >= PERFECT_TAP_ &&
+				absJudgementTime < GREAT_TAP_) {
+				middleResult_.great++;
+				closestNote.judgement = NoteJudgementSelection::Great;
+				// 判定が確定したらフラグを立てる
+				closestNote.isJudged = true;
+			}
+			//Good用
+			else if (absJudgementTime >= GREAT_TAP_ &&
+				absJudgementTime < GOOD_TAP_) {
+				middleResult_.good;
+				closestNote.judgement = NoteJudgementSelection::Good;
+				// 判定が確定したらフラグを立てる
+				closestNote.isJudged = true;
+			}
+			//Miss用
+			else if (absJudgementTime >= GOOD_TAP_ &&
+				absJudgementTime < MISS_TAP_) {
+				middleResult_.miss++;
+				closestNote.judgement = NoteJudgementSelection::Miss;
+				// 判定が確定したらフラグを立てる
+				closestNote.isJudged = true;
+			}
 		}
-		//Great用
-		if (absJudgementTime >= PERFECT_TAP_ &&
-			absJudgementTime < GREAT_TAP_) {
-			middleResult_.great++;
-			closestNote.judgement = NoteJudgementSelection::Great;
-			// 判定が確定したらフラグを立てる
-			closestNote.isJudged = true;
-		}
-		//Good用
-		else if (absJudgementTime >= GREAT_TAP_ &&
-			absJudgementTime < GOOD_TAP_) {
-			middleResult_.good;
-			closestNote.judgement = NoteJudgementSelection::Good;
-			// 判定が確定したらフラグを立てる
-			closestNote.isJudged = true;
-		}
-		//Miss用
-		else if (absJudgementTime >= GOOD_TAP_ &&
-			absJudgementTime < MISS_TAP_) {
-			middleResult_.miss++;
-			closestNote.judgement = NoteJudgementSelection::Miss;
-			// 判定が確定したらフラグを立てる
-			closestNote.isJudged = true;
-		}
+
+		
 	}
 }
 
@@ -520,7 +672,10 @@ void GameScene::FlowProcessRight() {
 		float_t positionY = SingleCalculation::Lerp(WAITING_POSITION_Y_, JUDGEMENT_POSITION_Y_, moveRatio);
 		//設定
 		note.noteSprite->SetPositionY(positionY);
-
+		//ロングノーツの場合長さを調整する必要がある
+		if (note.noteSelection == 3) {
+			note.noteSprite->SetScale({ .x = 1.0f,.y = 1.0f });
+		}
 #ifdef _DEBUG
 		ImGui::Begin("右ノーツ");
 		ImGui::InputFloat("割合", &moveRatio);
