@@ -110,6 +110,9 @@ enum NoteJudgementSelection {
 	None,
 };
 
+
+
+
 struct NoteInstance {
 	// 0=左, 1=中, 2=右
 	int32_t lane=0;   
@@ -129,8 +132,13 @@ struct NoteInstance {
 	Vector2 position = {};
 	//ノーツのスプライト
 	std::unique_ptr<Elysia::Sprite> noteSprite=nullptr;
+	//ロング用のボディのスプライト
+	std::unique_ptr<Elysia::Sprite> longBodyNoteSprite = nullptr;
+
 	//判定されたか
 	bool isJudged = false;
+	//処理終了
+	bool isProcessEnd = false;
 	//判定
 	uint32_t judgement= NoteJudgementSelection::None;
 	//
@@ -243,7 +251,7 @@ private:
 	//待ち最大時間
 	const float_t WAIT_LIMIT_TIME_ = 3.0f;
 	//待機の座標
-	const float_t WAITING_POSITION_Y_ = -50.0f;
+	const float_t WAITING_POSITION_Y_ = -5.0f;
 	//判定の座標
 	const float_t JUDGEMENT_POSITION_Y_ = 650.0f;
 
@@ -310,11 +318,6 @@ private:
 	std::vector<NoteInstance> middleNoteInstances_;
 	std::vector<NoteInstance> rightNoteInstances_;
 
-	
-	
-	
-
-
 	float_t leftTouchTime_ = 0.0f;
 	float_t middleTouchTime_ = 0.0f;
 	float_t rightTouchTime_ = 0.0f;
@@ -325,8 +328,20 @@ private:
 	bool isHitMiddle_ = false;
 	bool isHitRight_ = false;
 
+	bool isPushLeft_ = false;
+	bool isPushMiddle_ = false;
+	bool isPushRight_ = false;
+
+
+	bool isHitLongNoteLeft_ = false;
+
+	int32_t bonusScore_ = 0;
+
+	Vector2 longNoteStartPosition_ = {};
+	NoteInstance startLongNoteInstance_ = {};
 
 	uint32_t noteRadius_ = 0u;
+
 
 	//レーンの座標
 	std::array<float_t, 3u>laneX_ = {100,200,300};
