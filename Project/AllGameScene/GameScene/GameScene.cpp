@@ -136,10 +136,10 @@ void GameScene::Initialize() {
 		{
 			// 1
 			{
-				{ 1, 0, 0 },
+				{ 2, 0, 0 },
 				{ 0, 1, 0 },
 				{ 0, 0, 1 },
-				{ 0, 1, 0 },
+				{ 3, 1, 0 },
 			},
 
 			// 2. bpm の値
@@ -538,6 +538,7 @@ void GameScene::FlowProcessLeft() {
 			note.judgement = NoteJudgementSelection::Miss;
 			// 判定が確定したらフラグを立てる
 			note.isJudged = true;
+			note.isProcessEnd = true;
 		}
 	}
 
