@@ -153,6 +153,9 @@ struct NoteInstance {
 	uint32_t judgement= NoteJudgementSelection::None;
 	//
 	bool isPlaySE = false;
+
+	//
+	float_t moveRatio = 0.0f;
 };
 
 
@@ -322,7 +325,7 @@ private:
 
 	float_t totalTime_ = 0.0f;
 	float_t noteMoveTime_ = 0.0f;
-	//std::vector<NoteInstance> noteInstances_;
+
 
 	std::vector<NoteInstance> leftNoteInstances_;
 	std::vector<NoteInstance> middleNoteInstances_;
@@ -333,11 +336,11 @@ private:
 	float_t rightTouchTime_ = 0.0f;
 
 
-
+	//タップ
 	bool isHitLeft_ = false;
 	bool isHitMiddle_ = false;
 	bool isHitRight_ = false;
-
+	//ホールド
 	bool isHoldLeft_ = false;
 	bool isHoldMiddle_ = false;
 	bool isHoldRight_ = false;
@@ -367,7 +370,7 @@ private:
 	NoteJudgementResult middleResult_ = {};
 	NoteJudgementResult rightResult_ = {};
 
-
+	//float_t startToEndSubtract = 0.0f;
 
 	//タッチ
 	NotePosition touch_ = {};

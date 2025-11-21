@@ -143,7 +143,7 @@ void GameScene::Initialize() {
 			},
 
 			// 2. bpm の値
-			170,
+			100,
 
 		},
 		
@@ -253,36 +253,36 @@ void GameScene::Initialize() {
 		},
 
 
-		//ドロップ
-		//1
-		{
-			// 1
-			{
-				{ 2, 0, 0 },
-				{ 0, 0, 0 },
-				{ 0, 0, 0 },
-				{ 3, 0, 0 },
-			},
+		////ドロップ
+		////1
+		//{
+		//	// 1
+		//	{
+		//		{ 2, 0, 0 },
+		//		{ 0, 0, 0 },
+		//		{ 0, 0, 0 },
+		//		{ 3, 0, 0 },
+		//	},
 
-			// 2. bpm の値
-			170,
+		//	// 2. bpm の値
+		//	170,
 
-		},
+		//},
 
-		//1
-		{
-			// 1
-			{
-				{ 0, 2, 0 },
-				{ 0, 3, 0 },
-				{ 0, 0, 2 },
-				{ 0, 0, 3 },
-			},
+		////1
+		//{
+		//	// 1
+		//	{
+		//		{ 0, 2, 0 },
+		//		{ 0, 3, 0 },
+		//		{ 0, 0, 2 },
+		//		{ 0, 0, 3 },
+		//	},
 
-			// 2. bpm の値
-			170,
+		//	// 2. bpm の値
+		//	170,
 
-		},
+		//},
 
 
 
@@ -307,6 +307,7 @@ void GameScene::Initialize() {
 	float_t totalTime = 0.0f;
 	//開始時間の設定
 	float_t startTime = START_OFFSET_TIME_;
+	
 
 	for (const auto& bar : newNotesData) {
 		//1拍の秒数
@@ -483,25 +484,34 @@ void GameScene::FlowProcessLeft() {
 	int32_t leftClosestNoteIndex = -1;
 	for (int32_t i = 0; i < leftNoteInstances_.size(); ++i) {
 		auto& note = leftNoteInstances_[i];
+		
+		
 		//判定済みは処理しない
 		if (note.isJudged&& note.isProcessEnd) {
 			continue;
 		}
 
+		
+
 		//動きの割合
-		float_t moveRatio = SingleCalculation::InverseLerp(note.startMoveTime, note.judgementArrivalTime, musicTime_);
+		note.moveRatio = SingleCalculation::InverseLerp(note.startMoveTime, note.judgementArrivalTime, musicTime_);
 		//座標の計算
-		float_t positionY = SingleCalculation::Lerp(WAITING_POSITION_Y_, JUDGEMENT_POSITION_Y_, moveRatio);
-		note.currentPosition = { .x = note.initialPosition.x ,.y = positionY };
+		note.currentPosition = { .x = note.initialPosition.x ,.y = SingleCalculation::Lerp(WAITING_POSITION_Y_, JUDGEMENT_POSITION_Y_, note.moveRatio) };
 		
 		//設定
-		note.noteSprite->SetPositionY(positionY);
+		note.noteSprite->SetPositionY(note.currentPosition.y);
 		//ボディ
 		if (note.longBodyNoteSprite!= nullptr) {
 
 			//始点から終点までの距離
 			Vector2 endLongNoteosition = {};
 			for (int32_t j = i+1; j < leftNoteInstances_.size(); ++j) {
+
+				if (leftNoteInstances_[j].moveRatio >= 1.0f) {
+					note.isJudged = true;
+					note.isProcessEnd = true;
+				}
+
 				//ロングノーツの終点を探す
 				if (leftNoteInstances_[j].noteSelection == NoteSelection::LongNoteEnd) {
 					endLongNoteosition = leftNoteInstances_[j].currentPosition;
@@ -509,36 +519,41 @@ void GameScene::FlowProcessLeft() {
 				}
 
 			}
-			//開始から終点までの長さを求める
-			float_t startToEndSubtract = note.currentPosition.y - endLongNoteosition.y;
-			//拡縮の設定
-			//note.longBodyNoteSprite->SetScale({ .x = 1.0f,.y = startToEndSubtract });
+			
 
+			if (!isHitLongNoteLeft_) {
+				//開始から終点までの長さを求める
+				float_t startToEndSubtract = note.currentPosition.y - endLongNoteosition.y;
+				//拡縮の設定
+				note.longBodyNoteSprite->SetScale({ .x = 1.0f,.y = startToEndSubtract });
+
+			}
+			else {
+				//開始から終点までの長さを求める
+				float_t startToEndSubtract = JUDGEMENT_POSITION_Y_ - endLongNoteosition.y;
+				//拡縮の設定
+				note.longBodyNoteSprite->SetScale({ .x = 1.0f,.y = startToEndSubtract });
+
+			}
+
+			//回転
+			note.longBodyNoteSprite->SetRotate(std::numbers::pi_v<float_t>);
 			//座標を設定
-			note.longBodyNoteSprite->SetPositionY(positionY);
-#ifdef _DEBUG
-			ImGui::Begin("ノーツ");
-			ImGui::InputFloat("ロング", &startToEndSubtract);
-			ImGui::End();
-#endif // _DEBUG
+			note.longBodyNoteSprite->SetPosition({ .x = note.currentPosition.x * 2.0f,.y = note.currentPosition.y });
+			
+
 
 		}
 		
-		////ロングの終点
-		//if (note.noteSelection == NoteSelection::LongNoteEnd && moveRatio >= 1.0f) {
-		//	isHitLongNoteLeft_ = false;
-		//	note.isProcessEnd = true;
-		//}
 
 #ifdef _DEBUG
 		//デバッグ用で判定線に重なった時に音を鳴らす
-		if (!note.isPlaySE && moveRatio >= 1.0f) {
+		if (!note.isPlaySE && note.moveRatio >= 1.0f) {
 			audio_->Play(arraiveSEHandle_, false);
 			note.isPlaySE = true;
 		}
 
 #endif // _DEBUG
-
 		
 		//タップ系
 		if (note.noteSelection == NoteSelection::TapNote ||
@@ -558,6 +573,11 @@ void GameScene::FlowProcessLeft() {
 				// 判定が確定したらフラグを立てる
 				note.isJudged = true;
 				note.isProcessEnd = true;
+			}
+		}
+		else if (note.noteSelection == NoteSelection::LongNoteEnd) {
+			if (note.moveRatio >= 1.0f) {
+				isHitLongNoteLeft_ = false;
 			}
 		}
 	}
@@ -646,6 +666,7 @@ void GameScene::FlowProcessLeft() {
 				closestNote.judgement = NoteJudgementSelection::Miss;
 				// 判定が確定したらフラグを立てる
 				closestNote.isJudged = true;
+				closestNote.isProcessEnd = true;
 				isHitLongNoteLeft_ = false;
 
 			}
