@@ -135,8 +135,11 @@ struct NoteInstance {
 	float_t startMoveTime = 0.0f;
 	// 表示中かどうか
 	bool isDisplay=false; 
-	//座標
-	Vector2 position = {};
+	//生成時の座標
+	Vector2 initialPosition = {};
+	//現在の座標
+	Vector2 currentPosition = {};
+
 	//ノーツのスプライト
 	std::unique_ptr<Elysia::Sprite> noteSprite=nullptr;
 	//ロング用のボディのスプライト

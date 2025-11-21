@@ -334,6 +334,7 @@ void GameScene::Initialize() {
 					totalTime + i * noteInterval - startTime,
 					true,
 					Vector2{100.0f, WAITING_POSITION_Y_},
+					Vector2{},
 					Elysia::Sprite::Create(noteTextureHandle, { 100.0f, WAITING_POSITION_Y_ })
 				);
 
@@ -348,6 +349,7 @@ void GameScene::Initialize() {
 					totalTime + i * noteInterval - startTime,
 					true,
 					Vector2{ 200.0f, WAITING_POSITION_Y_ },
+					Vector2{},
 					Elysia::Sprite::Create(noteTextureHandle, { 200.0f, WAITING_POSITION_Y_ })
 				);
 			}
@@ -361,6 +363,7 @@ void GameScene::Initialize() {
 					totalTime + i * noteInterval - startTime,
 					true,
 					Vector2{ 300.0f, WAITING_POSITION_Y_ },
+					Vector2{},
 					Elysia::Sprite::Create(noteTextureHandle, { 300.0f, WAITING_POSITION_Y_ })
 				);
 			}
@@ -381,6 +384,7 @@ void GameScene::Initialize() {
 					totalTime + i * noteInterval - startTime,
 					true,
 					Vector2{ 100.0f, WAITING_POSITION_Y_ },
+					Vector2{},
 					Elysia::Sprite::Create(startLongNoteTextureHandle, { 100.0f, WAITING_POSITION_Y_ }),
 					Elysia::Sprite::Create(longNoteTextureHandle, { 100.0f, WAITING_POSITION_Y_ }));
 			}
@@ -394,6 +398,7 @@ void GameScene::Initialize() {
 					totalTime + i * noteInterval - startTime,
 					true,
 					Vector2{ 200.0f, WAITING_POSITION_Y_ },
+					Vector2{},
 					Elysia::Sprite::Create(startLongNoteTextureHandle, { 200.0f, WAITING_POSITION_Y_ }),
 					Elysia::Sprite::Create(longNoteTextureHandle, { 200.0f, WAITING_POSITION_Y_ })
 				);
@@ -408,6 +413,7 @@ void GameScene::Initialize() {
 					totalTime + i * noteInterval - startTime,
 					true,
 					Vector2{ 300.0f, WAITING_POSITION_Y_ },
+					Vector2{},
 					Elysia::Sprite::Create(startLongNoteTextureHandle, { 300.0f, WAITING_POSITION_Y_ }),
 					Elysia::Sprite::Create(longNoteTextureHandle, { 300.0f, WAITING_POSITION_Y_ })
 				);
@@ -427,6 +433,7 @@ void GameScene::Initialize() {
 					totalTime + i * noteInterval - startTime,
 					true,
 					Vector2{ 100.0f, WAITING_POSITION_Y_ },
+					Vector2{},
 					Elysia::Sprite::Create(endLongNoteTextureHandle, { 100.0f, WAITING_POSITION_Y_ }));
 			}
 			if (note.middle == 3) {
@@ -439,6 +446,7 @@ void GameScene::Initialize() {
 					totalTime + i * noteInterval - startTime,
 					true,
 					Vector2{ 200.0f, WAITING_POSITION_Y_ },
+					Vector2{},
 					Elysia::Sprite::Create(endLongNoteTextureHandle, { 200.0f, WAITING_POSITION_Y_ })
 				);
 			}
@@ -452,6 +460,7 @@ void GameScene::Initialize() {
 					totalTime + i * noteInterval - startTime,
 					true,
 					Vector2{ 300.0f, WAITING_POSITION_Y_ },
+					Vector2{},
 					Elysia::Sprite::Create(endLongNoteTextureHandle, { 300.0f, WAITING_POSITION_Y_ })
 				);
 			}
@@ -483,26 +492,27 @@ void GameScene::FlowProcessLeft() {
 		float_t moveRatio = SingleCalculation::InverseLerp(note.startMoveTime, note.judgementArrivalTime, musicTime_);
 		//座標の計算
 		float_t positionY = SingleCalculation::Lerp(WAITING_POSITION_Y_, JUDGEMENT_POSITION_Y_, moveRatio);
+		note.currentPosition = { .x = note.initialPosition.x ,.y = positionY };
+		
 		//設定
 		note.noteSprite->SetPositionY(positionY);
 		//ボディ
 		if (note.longBodyNoteSprite!= nullptr) {
 
 			//始点から終点までの距離
-
 			Vector2 endLongNoteosition = {};
 			for (int32_t j = i+1; j < leftNoteInstances_.size(); ++j) {
 				//ロングノーツの終点を探す
 				if (leftNoteInstances_[j].noteSelection == NoteSelection::LongNoteEnd) {
-					endLongNoteosition = leftNoteInstances_[j].position;
+					endLongNoteosition = leftNoteInstances_[j].currentPosition;
 					break;
 				}
 
 			}
-
-			float_t startToEndSubtract = longNoteStartPosition_.y - endLongNoteosition.y;
+			//開始から終点までの長さを求める
+			float_t startToEndSubtract = note.currentPosition.y - endLongNoteosition.y;
 			//拡縮の設定
-			note.longBodyNoteSprite->SetScale({ .x = 1.0f,.y = startToEndSubtract });
+			//note.longBodyNoteSprite->SetScale({ .x = 1.0f,.y = startToEndSubtract });
 
 			//座標を設定
 			note.longBodyNoteSprite->SetPositionY(positionY);
@@ -607,7 +617,7 @@ void GameScene::FlowProcessLeft() {
 				// 判定が確定したらフラグを立てる
 				closestNote.isJudged = true;
 				isHitLongNoteLeft_ = true;
-				longNoteStartPosition_ = closestNote.position;
+				longNoteStartPosition_ = closestNote.currentPosition;
 			}
 			//Great用
 			if (absJudgementTime >= PERFECT_TAP_ &&
@@ -617,7 +627,7 @@ void GameScene::FlowProcessLeft() {
 				// 判定が確定したらフラグを立てる
 				closestNote.isJudged = true;
 				isHitLongNoteLeft_ = true;
-				longNoteStartPosition_ = closestNote.position;
+				longNoteStartPosition_ = closestNote.currentPosition;
 			}
 			//Good用
 			else if (absJudgementTime >= GREAT_TAP_ &&
@@ -627,7 +637,7 @@ void GameScene::FlowProcessLeft() {
 				// 判定が確定したらフラグを立てる
 				closestNote.isJudged = true;
 				isHitLongNoteLeft_ = true;
-				longNoteStartPosition_ = closestNote.position;
+				longNoteStartPosition_ = closestNote.currentPosition;
 			}
 			//Miss用
 			else if (absJudgementTime >= GOOD_TAP_ &&
