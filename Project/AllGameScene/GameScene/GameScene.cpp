@@ -143,7 +143,7 @@ void GameScene::Initialize() {
 			},
 
 			// 2. bpm の値
-			100,
+			170,
 
 		},
 		
@@ -386,8 +386,8 @@ void GameScene::Initialize() {
 					true,
 					Vector2{ 100.0f, WAITING_POSITION_Y_ },
 					Vector2{},
-					Elysia::Sprite::Create(startLongNoteTextureHandle, { 100.0f, WAITING_POSITION_Y_ }),
-					Elysia::Sprite::Create(longNoteTextureHandle, { 100.0f, WAITING_POSITION_Y_ }));
+					Elysia::Sprite::Create(startLongNoteTextureHandle, { 100.0f, WAITING_POSITION_Y_ })
+					);
 			}
 			if (note.middle == 2) {
 				middleNoteInstances_.emplace_back(
@@ -400,8 +400,8 @@ void GameScene::Initialize() {
 					true,
 					Vector2{ 200.0f, WAITING_POSITION_Y_ },
 					Vector2{},
-					Elysia::Sprite::Create(startLongNoteTextureHandle, { 200.0f, WAITING_POSITION_Y_ }),
-					Elysia::Sprite::Create(longNoteTextureHandle, { 200.0f, WAITING_POSITION_Y_ })
+					Elysia::Sprite::Create(startLongNoteTextureHandle, { 200.0f, WAITING_POSITION_Y_ })
+					
 				);
 			}
 			if (note.right == 2) {
@@ -415,8 +415,8 @@ void GameScene::Initialize() {
 					true,
 					Vector2{ 300.0f, WAITING_POSITION_Y_ },
 					Vector2{},
-					Elysia::Sprite::Create(startLongNoteTextureHandle, { 300.0f, WAITING_POSITION_Y_ }),
-					Elysia::Sprite::Create(longNoteTextureHandle, { 300.0f, WAITING_POSITION_Y_ })
+					Elysia::Sprite::Create(startLongNoteTextureHandle, { 300.0f, WAITING_POSITION_Y_ })
+					
 				);
 			}
 #pragma endregion
@@ -435,7 +435,9 @@ void GameScene::Initialize() {
 					true,
 					Vector2{ 100.0f, WAITING_POSITION_Y_ },
 					Vector2{},
-					Elysia::Sprite::Create(endLongNoteTextureHandle, { 100.0f, WAITING_POSITION_Y_ }));
+					Elysia::Sprite::Create(endLongNoteTextureHandle, { 100.0f, WAITING_POSITION_Y_ }),
+					Elysia::Sprite::Create(longNoteTextureHandle, { 100.0f, WAITING_POSITION_Y_ })
+				);
 			}
 			if (note.middle == 3) {
 				middleNoteInstances_.emplace_back(
@@ -448,7 +450,9 @@ void GameScene::Initialize() {
 					true,
 					Vector2{ 200.0f, WAITING_POSITION_Y_ },
 					Vector2{},
-					Elysia::Sprite::Create(endLongNoteTextureHandle, { 200.0f, WAITING_POSITION_Y_ })
+					Elysia::Sprite::Create(endLongNoteTextureHandle, { 200.0f, WAITING_POSITION_Y_ }),
+					Elysia::Sprite::Create(longNoteTextureHandle, { 200.0f, WAITING_POSITION_Y_ })
+
 				);
 			}
 			if (note.right == 3) {
@@ -462,7 +466,8 @@ void GameScene::Initialize() {
 					true,
 					Vector2{ 300.0f, WAITING_POSITION_Y_ },
 					Vector2{},
-					Elysia::Sprite::Create(endLongNoteTextureHandle, { 300.0f, WAITING_POSITION_Y_ })
+					Elysia::Sprite::Create(endLongNoteTextureHandle, { 300.0f, WAITING_POSITION_Y_ }),
+					Elysia::Sprite::Create(longNoteTextureHandle, { 300.0f, WAITING_POSITION_Y_ })
 				);
 			}
 #pragma endregion
@@ -502,47 +507,66 @@ void GameScene::FlowProcessLeft() {
 		note.noteSprite->SetPositionY(note.currentPosition.y);
 		//ボディ
 		if (note.longBodyNoteSprite!= nullptr) {
-
-			//始点から終点までの距離
-			Vector2 endLongNoteosition = {};
-			for (int32_t j = i+1; j < leftNoteInstances_.size(); ++j) {
-
-				if (leftNoteInstances_[j].moveRatio >= 1.0f) {
-					note.isJudged = true;
-					note.isProcessEnd = true;
-				}
-
-				//ロングノーツの終点を探す
-				if (leftNoteInstances_[j].noteSelection == NoteSelection::LongNoteEnd) {
-					endLongNoteosition = leftNoteInstances_[j].currentPosition;
+			
+			//始点のノーツの座標を取得する
+			Vector2 startLongNotePosition = {};
+			//始点の判定を確認
+			bool isProcessEnd = false;
+			for (int32_t j = i - 1; j>=0; --j) {
+				if (leftNoteInstances_[j].noteSelection == NoteSelection::LongNoteStart) {
+					startLongNotePosition = leftNoteInstances_[j].currentPosition;
+					isProcessEnd = leftNoteInstances_[j].isProcessEnd;
 					break;
 				}
-
-			}
-			
-
-			if (!isHitLongNoteLeft_) {
-				//開始から終点までの長さを求める
-				float_t startToEndSubtract = note.currentPosition.y - endLongNoteosition.y;
-				//拡縮の設定
-				note.longBodyNoteSprite->SetScale({ .x = 1.0f,.y = startToEndSubtract });
-
-			}
-			else {
-				//開始から終点までの長さを求める
-				float_t startToEndSubtract = JUDGEMENT_POSITION_Y_ - endLongNoteosition.y;
-				//拡縮の設定
-				note.longBodyNoteSprite->SetScale({ .x = 1.0f,.y = startToEndSubtract });
-
+				
 			}
 
-			//回転
-			note.longBodyNoteSprite->SetRotate(std::numbers::pi_v<float_t>);
-			//座標を設定
-			note.longBodyNoteSprite->SetPosition({ .x = note.currentPosition.x * 2.0f,.y = note.currentPosition.y });
-			
+			if (isProcessEnd) {
+				continue;
+			}
 
+			//サイズを計算
+			float_t longNoteBodyScale = startLongNotePosition.y - note.currentPosition.y;
+			//スケールの設定
+			note.longBodyNoteSprite->SetScale({ .x = 1.0f,.y = longNoteBodyScale });
+			//座標は終点から伸びているので同じで良い
+			note.longBodyNoteSprite->SetPosition(note.currentPosition);
 
+			////終点から始点までの距離
+			//Vector2 startLongNoteosition = {};
+			//for (int32_t j = i-1; j < leftNoteInstances_.size(); ++j) {
+			//
+			//	if (leftNoteInstances_[j].moveRatio >= 1.0f) {
+			//		note.isJudged = true;
+			//		note.isProcessEnd = true;
+			//	}
+			//
+			//	//ロングノーツの終点を探す
+			//	if (leftNoteInstances_[j].noteSelection == NoteSelection::LongNoteEnd) {
+			//		endLongNoteosition = leftNoteInstances_[j].currentPosition;
+			//		break;
+			//	}
+			//
+			//}
+			//
+			//
+			//if (!isHitLongNoteLeft_) {
+			//	//開始から終点までの長さを求める
+			//	float_t startToEndSubtract = note.currentPosition.y - endLongNoteosition.y;
+			//	//拡縮の設定
+			//	note.longBodyNoteSprite->SetScale({ .x = 1.0f,.y = startToEndSubtract });
+			//
+			//}
+			//else {
+			//	//開始から終点までの長さを求める
+			//	float_t startToEndSubtract = JUDGEMENT_POSITION_Y_ - endLongNoteosition.y;
+			//	//拡縮の設定
+			//	note.longBodyNoteSprite->SetScale({ .x = 1.0f,.y = startToEndSubtract });
+			//
+			//}
+		
+		
+		
 		}
 		
 
