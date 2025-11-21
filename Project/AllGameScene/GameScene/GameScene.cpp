@@ -415,7 +415,7 @@ void GameScene::Initialize() {
 #pragma endregion
 
 
-#pragma region 開始
+#pragma region 終点
 
 			if (note.left == 3) {
 				leftNoteInstances_.emplace_back(
@@ -479,66 +479,76 @@ void GameScene::FlowProcessLeft() {
 			continue;
 		}
 
-		//if (!note.isJudged) {
-			//動きの割合
-			float_t moveRatio = SingleCalculation::InverseLerp(note.startMoveTime, note.judgementArrivalTime, musicTime_);
-			//座標の計算
-			float_t positionY = SingleCalculation::Lerp(WAITING_POSITION_Y_, JUDGEMENT_POSITION_Y_, moveRatio);
-			//設定
-			note.noteSprite->SetPositionY(positionY);
-			//ボディ
-			if (note.longBodyNoteSprite!= nullptr) {
+		//動きの割合
+		float_t moveRatio = SingleCalculation::InverseLerp(note.startMoveTime, note.judgementArrivalTime, musicTime_);
+		//座標の計算
+		float_t positionY = SingleCalculation::Lerp(WAITING_POSITION_Y_, JUDGEMENT_POSITION_Y_, moveRatio);
+		//設定
+		note.noteSprite->SetPositionY(positionY);
+		//ボディ
+		if (note.longBodyNoteSprite!= nullptr) {
 
-				//視点から終点までの距離
-				float_t startToEndSubtract = note.position.y - longNoteStartPosition_.y;
-				//拡縮の設定
-				note.longBodyNoteSprite->SetScale({ .x = 1.0f,.y = startToEndSubtract });
+			//始点から終点までの距離
 
-				//座標を設定
-				note.longBodyNoteSprite->SetPositionY(startToEndSubtract);
+			Vector2 endLongNoteosition = {};
+			for (int32_t j = i+1; j < leftNoteInstances_.size(); ++j) {
+				//ロングノーツの終点を探す
+				if (leftNoteInstances_[j].noteSelection == NoteSelection::LongNoteEnd) {
+					endLongNoteosition = leftNoteInstances_[j].position;
+					break;
+				}
 
 			}
-			
-			//ロングの終点
-			if (note.noteSelection == 3 && moveRatio >= 1.0f) {
-				isHitLongNoteLeft_ = false;
-				note.isProcessEnd = true;
-			}
+
+			float_t startToEndSubtract = longNoteStartPosition_.y - endLongNoteosition.y;
+			//拡縮の設定
+			note.longBodyNoteSprite->SetScale({ .x = 1.0f,.y = startToEndSubtract });
+
+			//座標を設定
+			note.longBodyNoteSprite->SetPositionY(positionY);
+#ifdef _DEBUG
+			ImGui::Begin("ノーツ");
+			ImGui::InputFloat("ロング", &startToEndSubtract);
+			ImGui::End();
+#endif // _DEBUG
+
+		}
+		
+		////ロングの終点
+		//if (note.noteSelection == NoteSelection::LongNoteEnd && moveRatio >= 1.0f) {
+		//	isHitLongNoteLeft_ = false;
+		//	note.isProcessEnd = true;
+		//}
 
 #ifdef _DEBUG
-			//デバッグ用で判定線に重なった時に音を鳴らす
-			if (!note.isPlaySE && moveRatio >= 1.0f) {
-				audio_->Play(arraiveSEHandle_, false);
-				note.isPlaySE = true;
-			}
-
-#endif // _DEBUG
-		//}
-		//else {
-			////ロングのボディー専用
-			//if (!note.isProcessEnd) {
-
-			//}
-		//}
-		
-
-
-
-		//入力されたとき
-		if (isHitLeft_) {
-			leftClosestNoteIndex = i; // ★ 最も近いノーツのインデックスを記録
-			break;
+		//デバッグ用で判定線に重なった時に音を鳴らす
+		if (!note.isPlaySE && moveRatio >= 1.0f) {
+			audio_->Play(arraiveSEHandle_, false);
+			note.isPlaySE = true;
 		}
 
-		//見過ごし用
-		float_t overlookValue = musicTime_ - note.judgementArrivalTime;
-		//見過ごし(Miss)用
-		if (overlookValue > MISS_TAP_) {
-			leftResult_.miss++;
-			note.judgement = NoteJudgementSelection::Miss;
-			// 判定が確定したらフラグを立てる
-			note.isJudged = true;
-			note.isProcessEnd = true;
+#endif // _DEBUG
+
+		
+		//タップ系
+		if (note.noteSelection == NoteSelection::TapNote ||
+			note.noteSelection == NoteSelection::LongNoteStart) {
+			//入力されたとき
+			if (isHitLeft_) {
+				leftClosestNoteIndex = i; // ★ 最も近いノーツのインデックスを記録
+				break;
+			}
+
+			//見過ごし用
+			float_t overlookValue = musicTime_ - note.judgementArrivalTime;
+			//見過ごし(Miss)用
+			if (overlookValue > MISS_TAP_) {
+				leftResult_.miss++;
+				note.judgement = NoteJudgementSelection::Miss;
+				// 判定が確定したらフラグを立てる
+				note.isJudged = true;
+				note.isProcessEnd = true;
+			}
 		}
 	}
 
@@ -550,7 +560,7 @@ void GameScene::FlowProcessLeft() {
 		float_t absJudgementTime = std::abs(leftTouchTime_ - closestNote.judgementArrivalTime);
 		
 		//通常タップ専用
-		if (closestNote.noteSelection == 1) {
+		if (closestNote.noteSelection == NoteSelection::TapNote) {
 			//Perfect用
 			if (absJudgementTime >= 0.0f &&
 				absJudgementTime < PERFECT_TAP_) {
@@ -588,7 +598,7 @@ void GameScene::FlowProcessLeft() {
 				closestNote.isProcessEnd = true;
 			}
 		}
-		else if (closestNote.noteSelection == 2) {
+		else if (closestNote.noteSelection == NoteSelection::LongNoteStart) {
 			//Perfect用
 			if (absJudgementTime >= 0.0f &&
 				absJudgementTime < PERFECT_TAP_) {
@@ -633,7 +643,7 @@ void GameScene::FlowProcessLeft() {
 	}
 	
 	//加算
-	if (isPushLeft_ && isHitLongNoteLeft_) {
+	if (isHoldLeft_ && isHitLongNoteLeft_) {
 		bonusScore_++;
 	}
 }
@@ -851,9 +861,9 @@ void GameScene::Update(Elysia::GameManager* gameManager) {
 		isHitRight_ = false;
 
 		//プッシュ(長押し)
-		isPushLeft_ = false;
-		isPushMiddle_ = false;
-		isPushRight_ = false;
+		isHoldLeft_ = false;
+		isHoldMiddle_ = false;
+		isHoldRight_ = false;
 
 		leftTouchTime_ = 0.0f;
 		middleTouchTime_ = 0.0f;
@@ -884,13 +894,13 @@ void GameScene::Update(Elysia::GameManager* gameManager) {
 
 
 		if (input_->IsPushKey(DIK_G) == true) {
-			isPushLeft_ = true;
+			isHoldLeft_ = true;
 		}
 		if (input_->IsPushKey(DIK_H) == true) {
-			isPushMiddle_ = true;
+			isHoldMiddle_ = true;
 		}
 		if (input_->IsPushKey(DIK_J) == true) {
-			isPushRight_ = true;
+			isHoldRight_ = true;
 		}
 
 			

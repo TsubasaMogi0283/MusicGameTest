@@ -102,6 +102,13 @@ struct NoteBar {
 	uint32_t bpm;
 };
 
+enum NoteSelection {
+	NoneNote,
+	TapNote,
+	LongNoteStart,
+	LongNoteEnd,
+};
+
 enum NoteJudgementSelection {
 	Perfect,
 	Great,
@@ -328,9 +335,9 @@ private:
 	bool isHitMiddle_ = false;
 	bool isHitRight_ = false;
 
-	bool isPushLeft_ = false;
-	bool isPushMiddle_ = false;
-	bool isPushRight_ = false;
+	bool isHoldLeft_ = false;
+	bool isHoldMiddle_ = false;
+	bool isHoldRight_ = false;
 
 
 	bool isHitLongNoteLeft_ = false;
