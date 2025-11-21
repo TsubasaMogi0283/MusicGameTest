@@ -253,21 +253,21 @@ void GameScene::Initialize() {
 		},
 
 
-		////ドロップ
-		////1
-		//{
-		//	// 1
-		//	{
-		//		{ 2, 0, 0 },
-		//		{ 0, 0, 0 },
-		//		{ 0, 0, 0 },
-		//		{ 3, 0, 0 },
-		//	},
+		//ドロップ
+		//1
+		{
+			// 1
+			{
+				{ 2, 0, 0 },
+				{ 0, 0, 0 },
+				{ 0, 0, 0 },
+				{ 3, 0, 0 },
+			},
 
-		//	// 2. bpm の値
-		//	170,
+			// 2. bpm の値
+			170,
 
-		//},
+		},
 
 		////1
 		//{
@@ -927,12 +927,23 @@ void GameScene::Update(Elysia::GameManager* gameManager) {
 		if (input_->IsPushKey(DIK_G) == true) {
 			isHoldLeft_ = true;
 		}
+		else {
+			isHoldLeft_ = false;
+			isHitLongNoteLeft_ = false;
+		}
 		if (input_->IsPushKey(DIK_H) == true) {
 			isHoldMiddle_ = true;
+		}
+		else {
+			isHoldMiddle_ = false;
 		}
 		if (input_->IsPushKey(DIK_J) == true) {
 			isHoldRight_ = true;
 		}
+		else {
+			isHoldRight_ = false;
+		}
+		
 
 			
 		//左
@@ -1029,7 +1040,6 @@ void GameScene::DrawSprite() {
 	//ノーツ
 	for (const auto& note : leftNoteInstances_) {
 		if (note.noteSprite != nullptr&&
-			!note.isJudged&&
 			!note.isProcessEnd) {
 			//ロング
 			if (note.longBodyNoteSprite != nullptr) {
